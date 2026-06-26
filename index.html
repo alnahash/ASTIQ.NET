@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ASTIQ — Custom App Studio</title>
-<meta name="description" content="ASTIQ is a studio that designs and builds custom mobile and web apps — from first idea to the App Store. We turn product ideas into polished, shippable software." />
-<meta property="og:title" content="ASTIQ — Custom App Studio" />
-<meta property="og:description" content="We design and build custom mobile and web apps, end to end." />
+<title>ASTIQ — Independent Software Studio</title>
+<meta name="description" content="ASTIQ is an independent software studio. We design, build, and ship our own apps — products made in-house from first idea to release." />
+<meta property="og:title" content="ASTIQ — Independent Software Studio" />
+<meta property="og:description" content="We build our own apps. An independent software studio." />
 <meta property="og:type" content="website" />
 <link rel="icon" type="image/png" href="/assets/favicon.png" />
 <link rel="apple-touch-icon" href="/assets/astiq-logo.png" />
@@ -70,37 +70,33 @@
   .btn-ghost:hover { background: rgba(255,255,255,0.09); }
   @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
 
-  header { padding: 96px 0 72px; text-align: center; }
+  header { padding: 104px 0 80px; text-align: center; }
   .eyebrow {
     display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 500;
     color: var(--text-dim); padding: 7px 15px; border: 1px solid var(--border);
     border-radius: 999px; background: var(--surface); margin-bottom: 30px;
   }
   .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #FF8A1E; box-shadow: 0 0 10px #FF8A1E; }
-  h1.hero { font-size: clamp(40px, 7vw, 78px); line-height: 1.03; font-weight: 700; }
-  .hero-sub { max-width: 600px; margin: 26px auto 38px; font-size: clamp(16px, 2.2vw, 19px); color: var(--text-dim); }
+  h1.hero { font-size: clamp(44px, 8vw, 88px); line-height: 1.0; font-weight: 700; }
+  .hero-sub { max-width: 580px; margin: 28px auto 38px; font-size: clamp(16px, 2.2vw, 19px); color: var(--text-dim); }
   .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-  .stats { display: flex; gap: 56px; justify-content: center; flex-wrap: wrap; margin-top: 72px; padding-top: 44px; border-top: 1px solid var(--border); }
-  .stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; }
+  .stats { display: flex; gap: 56px; justify-content: center; flex-wrap: wrap; margin-top: 76px; padding-top: 44px; border-top: 1px solid var(--border); }
+  .stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; }
   .stat .lbl { font-size: 13.5px; color: var(--text-faint); margin-top: 4px; }
 
-  section { padding: 92px 0; }
-  .sec-head { max-width: 640px; margin-bottom: 52px; }
+  section { padding: 88px 0; }
+  .sec-head { max-width: 680px; margin-bottom: 48px; }
   .sec-tag { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
   .sec-title { font-size: clamp(28px, 4.5vw, 44px); font-weight: 700; line-height: 1.12; margin-top: 14px; }
-  .sec-desc { color: var(--text-dim); font-size: 17px; margin-top: 16px; }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px, 1fr)); gap: 18px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
-    padding: 30px 26px; transition: border-color .2s, transform .2s, background .2s;
-  }
-  .card:hover { border-color: var(--border-2); transform: translateY(-4px); background: var(--surface-2); }
-  .card .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
-  .card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 9px; }
-  .card p { color: var(--text-dim); font-size: 15px; }
+  /* About / bio */
+  .bio { font-size: clamp(18px, 2.6vw, 23px); line-height: 1.6; color: var(--text); max-width: 760px; }
+  .bio p { margin-bottom: 22px; }
+  .bio .dim { color: var(--text-dim); }
+  .bio strong { font-weight: 600; }
 
+  /* Apps */
   .work-card {
     display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; align-items: stretch;
     background: var(--bg-2); border: 1px solid var(--border); border-radius: 24px; overflow: hidden;
@@ -125,9 +121,13 @@
   }
   @media (max-width: 760px) { .work-card { grid-template-columns: 1fr; } .work-visual { min-height: 240px; order: -1; } }
 
-  .cta-band { text-align: center; background: var(--bg-2); border: 1px solid var(--border); border-radius: 26px; padding: 64px 32px; position: relative; overflow: hidden; }
-  .cta-band h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 42px); font-weight: 700; margin-bottom: 16px; }
-  .cta-band p { color: var(--text-dim); font-size: 17px; max-width: 480px; margin: 0 auto 32px; }
+  .more {
+    margin-top: 18px; border: 1px dashed var(--border-2); border-radius: 20px;
+    padding: 28px 32px; display: flex; align-items: center; gap: 16px; color: var(--text-dim);
+  }
+  .more .plus { font-family: 'Space Grotesk', sans-serif; font-size: 26px; color: var(--text-faint); }
+  .more h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text); }
+  .more p { font-size: 14.5px; }
 
   footer { border-top: 1px solid var(--border); padding: 48px 0; }
   .foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
@@ -148,74 +148,67 @@
     <div class="wrap nav-inner">
       <a class="brand" href="/"><img class="mark" src="/assets/astiq-logo.png" alt="ASTIQ logo" /> ASTIQ</a>
       <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-primary" href="#contact">Start a project</a>
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+        <a href="mailto:alnahash@gmail.com">Contact</a>
       </div>
     </div>
   </nav>
 
   <header>
     <div class="wrap">
-      <div class="eyebrow reveal"><span class="dot"></span> Custom app studio</div>
-      <h1 class="hero display reveal">We build <span class="grad-text">custom apps</span><br />people love to use.</h1>
-      <p class="hero-sub reveal">ASTIQ designs and ships polished mobile and web products — from the first sketch to the App Store. One team, idea to launch.</p>
+      <div class="eyebrow reveal"><span class="dot"></span> Independent software studio</div>
+      <h1 class="hero display reveal">We build <span class="grad-text">apps.</span></h1>
+      <p class="hero-sub reveal">ASTIQ is an independent software studio. We design, build, and ship our own apps — products we want to exist, made in-house from first idea to release.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#contact">Start a project</a>
-        <a class="btn btn-ghost" href="#work">See our work →</a>
+        <a class="btn btn-primary" href="#apps">Explore our apps →</a>
+        <a class="btn btn-ghost" href="#about">About ASTIQ</a>
       </div>
 
       <div class="stats reveal">
-        <div class="stat"><div class="num grad-text">Idea → Store</div><div class="lbl">Full product lifecycle</div></div>
-        <div class="stat"><div class="num grad-text">iOS · Android · Web</div><div class="lbl">Cross-platform</div></div>
-        <div class="stat"><div class="num grad-text">Design-led</div><div class="lbl">Pixel-obsessed builds</div></div>
+        <div class="stat"><div class="num grad-text">Independent</div><div class="lbl">Self-directed studio</div></div>
+        <div class="stat"><div class="num grad-text">Made in-house</div><div class="lbl">Design to release</div></div>
+        <div class="stat"><div class="num grad-text">iOS · Android</div><div class="lbl">Built for mobile</div></div>
       </div>
     </div>
   </header>
 
-  <section id="services">
+  <section id="about">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="sec-tag grad-text">What we do</div>
-        <h2 class="sec-title display">Everything it takes to ship a great app.</h2>
-        <p class="sec-desc">We handle the whole stack — product thinking, design, engineering, and release — so you get one accountable team instead of five vendors.</p>
+        <div class="sec-tag grad-text">About</div>
+        <h2 class="sec-title display">A studio that makes its own software.</h2>
       </div>
-      <div class="grid">
-        <div class="card reveal"><div class="ic">📱</div><h3>Mobile apps</h3><p>Native-quality iOS and Android apps built with React Native and Expo, tuned for performance and feel.</p></div>
-        <div class="card reveal"><div class="ic">🖥️</div><h3>Web apps</h3><p>Fast, modern web products and dashboards — responsive, accessible, and built to scale.</p></div>
-        <div class="card reveal"><div class="ic">✏️</div><h3>Product design</h3><p>Interface and experience design that turns a rough idea into something people actually want to use.</p></div>
-        <div class="card reveal"><div class="ic">🚀</div><h3>Launch &amp; growth</h3><p>Store submission, analytics, ads, and the backend plumbing to take you live and keep you running.</p></div>
+      <div class="bio reveal">
+        <p>ASTIQ is a small, independent software studio. We build <strong>our own apps</strong> — products we believe in and want to use ourselves.</p>
+        <p class="dim">Every app is made end to end, in-house: the idea, the design, the engineering, and the release. We're not an agency and we don't take on client work. We just make software we're proud of and put it out into the world.</p>
       </div>
     </div>
   </section>
 
-  <section id="work">
+  <section id="apps">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="sec-tag grad-text">Selected work</div>
-        <h2 class="sec-title display">Products we've built.</h2>
+        <div class="sec-tag grad-text">Our apps</div>
+        <h2 class="sec-title display">What we've made.</h2>
       </div>
       <a class="work-card reveal" href="/cryptogram">
         <div class="work-info">
           <span class="pill">Word game · iOS &amp; Android</span>
           <h3>ASTIQ Cryptogram</h3>
-          <p>A cozy cryptogram puzzle game — decode hidden quotes across ten difficulty tiers and climb a global leaderboard. Built end to end: design, gameplay engine, Firebase backend, and store release.</p>
-          <span class="work-link">View project <span class="arrow">→</span></span>
+          <p>A cozy cryptogram puzzle game — decode hidden quotes across ten difficulty tiers and climb a global leaderboard. Designed, built, and shipped entirely in-house.</p>
+          <span class="work-link">View app <span class="arrow">→</span></span>
         </div>
         <div class="work-visual">
           <img class="tile" src="/assets/astiq-logo.png" alt="ASTIQ Cryptogram app icon" />
         </div>
       </a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="cta-band reveal">
-        <h2 class="display">Have an idea? Let's build it.</h2>
-        <p>Tell us what you're picturing. We'll help shape it into something real and shippable.</p>
-        <a class="btn btn-primary" href="mailto:alnahash@gmail.com">Get in touch →</a>
+      <div class="more reveal">
+        <span class="plus">+</span>
+        <div>
+          <h4>More on the way</h4>
+          <p>We're always building. New apps from the studio will land here.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -224,8 +217,8 @@
     <div class="wrap foot-inner">
       <a class="brand" href="/"><img class="mark" src="/assets/astiq-logo.png" alt="ASTIQ logo" /> ASTIQ</a>
       <div class="foot-links">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
         <a href="/cryptogram">Cryptogram</a>
         <a href="mailto:alnahash@gmail.com">Contact</a>
       </div>
