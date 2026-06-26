@@ -8,6 +8,9 @@
 <meta property="og:title" content="ASTIQ — Custom App Studio" />
 <meta property="og:description" content="We design and build custom mobile and web apps, end to end." />
 <meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="/assets/favicon.png" />
+<link rel="apple-touch-icon" href="/assets/astiq-logo.png" />
+<meta property="og:image" content="/assets/astiq-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -53,11 +56,7 @@
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
   .brand { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.02em; }
-  .mark {
-    width: 30px; height: 30px; border-radius: 9px; background: var(--grad);
-    display: inline-flex; align-items: center; justify-content: center;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #0a0a0f;
-  }
+  .mark { width: 32px; height: 32px; border-radius: 9px; object-fit: cover; display: block; }
   .nav-links { display: flex; align-items: center; gap: 34px; }
   .nav-links a { color: var(--text-dim); font-size: 14.5px; font-weight: 500; transition: color .15s; }
   .nav-links a:hover { color: var(--text); }
@@ -120,14 +119,10 @@
     display: flex; align-items: center; justify-content: center; position: relative; min-height: 320px;
   }
   .tile {
-    width: 132px; height: 132px; border-radius: 28px; background: #17131f;
-    border: 1px solid rgba(255,255,255,0.08); position: relative;
+    width: 138px; height: 138px; border-radius: 30px; display: block;
+    border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 30px 80px rgba(124,92,255,0.25);
   }
-  .tile .d { position: absolute; border-radius: 50%; }
-  .tile .a { width: 30px; height: 30px; top: 32px; left: 50px; background: #F8A933; border: 4px solid #22D3EE; }
-  .tile .b { width: 26px; height: 26px; bottom: 30px; left: 28px; background: #ECECF2; }
-  .tile .c { width: 26px; height: 26px; bottom: 30px; right: 28px; background: #ECECF2; }
   @media (max-width: 760px) { .work-card { grid-template-columns: 1fr; } .work-visual { min-height: 240px; order: -1; } }
 
   .cta-band { text-align: center; background: var(--bg-2); border: 1px solid var(--border); border-radius: 26px; padding: 64px 32px; position: relative; overflow: hidden; }
@@ -151,7 +146,7 @@
 
   <nav>
     <div class="wrap nav-inner">
-      <a class="brand" href="/"><span class="mark">A</span> ASTIQ</a>
+      <a class="brand" href="/"><img class="mark" src="/assets/astiq-logo.png" alt="ASTIQ logo" /> ASTIQ</a>
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
@@ -209,7 +204,7 @@
           <span class="work-link">View project <span class="arrow">→</span></span>
         </div>
         <div class="work-visual">
-          <div class="tile"><span class="d a"></span><span class="d b"></span><span class="d c"></span></div>
+          <img class="tile" src="/assets/astiq-logo.png" alt="ASTIQ Cryptogram app icon" />
         </div>
       </a>
     </div>
@@ -227,7 +222,7 @@
 
   <footer>
     <div class="wrap foot-inner">
-      <a class="brand" href="/"><span class="mark">A</span> ASTIQ</a>
+      <a class="brand" href="/"><img class="mark" src="/assets/astiq-logo.png" alt="ASTIQ logo" /> ASTIQ</a>
       <div class="foot-links">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
