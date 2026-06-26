@@ -18,4 +18,4 @@ Static site (no build step) deployed on Vercel.
 Create a folder `productname/` with an `index.html` (and any sub-pages), then link
 it from the "Work" section of the root `index.html`.
 
-Contact: alnahash@gmail.com
+Contact: hello@astiq.net
