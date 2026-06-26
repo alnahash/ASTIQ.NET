@@ -3,146 +3,246 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ASTIQ Cryptogram — Decode • Deduce • Solve</title>
-<meta name="description" content="ASTIQ Cryptogram is a word puzzle game where you decode hidden quotes by substituting letters. Solve cryptograms across 10 difficulty levels and climb the global leaderboard." />
-<meta property="og:title" content="ASTIQ Cryptogram" />
-<meta property="og:description" content="Decode hidden quotes. Climb the leaderboard. A cozy cryptogram puzzle game." />
+<title>ASTIQ — Custom App Studio</title>
+<meta name="description" content="ASTIQ is a studio that designs and builds custom mobile and web apps — from first idea to the App Store. We turn product ideas into polished, shippable software." />
+<meta property="og:title" content="ASTIQ — Custom App Studio" />
+<meta property="og:description" content="We design and build custom mobile and web apps, end to end." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --canvas: #FBF1DD;
-    --oatmeal: #F2E3C6;
-    --paper: #FFFDF6;
-    --border-soft: #E8D7B6;
-    --ink: #34221A;
-    --cocoa: #4A3324;
-    --taupe: #8C6A4F;
-    --lime: #A8CB53;
-    --lime-edge: #6E9A2C;
-    --grape: #7B5BD0;
-    --grape-edge: #573B9E;
-    --amber: #F8A933;
-    --sky: #5BB6D6;
+    --bg: #07070B;
+    --bg-2: #0D0D14;
+    --surface: rgba(255,255,255,0.025);
+    --surface-2: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.09);
+    --border-2: rgba(255,255,255,0.16);
+    --text: #ECECF2;
+    --text-dim: #9595A6;
+    --text-faint: #61616F;
+    --violet: #7C5CFF;
+    --cyan: #22D3EE;
+    --grad: linear-gradient(120deg, #7C5CFF 0%, #4F8BFF 45%, #22D3EE 100%);
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: 'Nunito', -apple-system, Segoe UI, Roboto, sans-serif;
-    background: var(--canvas);
-    color: var(--ink);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', -apple-system, Segoe UI, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden;
   }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  ::selection { background: rgba(124,92,255,0.35); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
+  .grad-text {
+    background: var(--grad); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
 
-  /* Header / hero */
-  header { padding: 72px 0 56px; text-align: center; }
-  .logo-tile {
-    width: 88px; height: 88px; border-radius: 20px; background: #20180F;
-    display: inline-flex; align-items: center; justify-content: center; margin-bottom: 28px;
-    position: relative;
-  }
-  .logo-tile .dot { position: absolute; border-radius: 50%; }
-  .logo-tile .d1 { width: 22px; height: 22px; background: var(--amber); border: 3px solid var(--sky); top: 22px; left: 33px; }
-  .logo-tile .d2 { width: 20px; height: 20px; background: var(--canvas); bottom: 20px; left: 20px; }
-  .logo-tile .d3 { width: 20px; height: 20px; background: var(--canvas); bottom: 20px; right: 20px; }
+  .glow { position: fixed; border-radius: 50%; filter: blur(110px); opacity: 0.5; z-index: -1; pointer-events: none; }
+  .glow-1 { width: 600px; height: 600px; background: #5B3CFF; top: -220px; left: -160px; }
+  .glow-2 { width: 520px; height: 520px; background: #0E7490; top: 240px; right: -200px; opacity: 0.35; }
 
-  h1 {
-    font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 56px;
-    letter-spacing: -1px; color: var(--ink); line-height: 1.05;
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px); background: rgba(7,7,11,0.6);
+    border-bottom: 1px solid var(--border);
   }
-  h1 .accent { color: var(--grape); }
-  .tagline {
-    font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 22px;
-    color: var(--taupe); margin-top: 12px;
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.02em; }
+  .mark {
+    width: 30px; height: 30px; border-radius: 9px; background: var(--grad);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #0a0a0f;
   }
-  .accent-line { width: 120px; height: 4px; background: var(--lime); border-radius: 999px; margin: 24px auto; }
-  .lede { font-size: 19px; color: var(--cocoa); max-width: 620px; margin: 0 auto 36px; }
+  .nav-links { display: flex; align-items: center; gap: 34px; }
+  .nav-links a { color: var(--text-dim); font-size: 14.5px; font-weight: 500; transition: color .15s; }
+  .nav-links a:hover { color: var(--text); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px;
+    padding: 11px 20px; border-radius: 11px; transition: transform .12s, box-shadow .2s, background .2s;
+  }
+  .btn-primary { background: var(--grad); color: #0a0a0f; box-shadow: 0 6px 24px rgba(124,92,255,0.32); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 34px rgba(124,92,255,0.45); }
+  .btn-ghost { background: var(--surface-2); color: var(--text); border: 1px solid var(--border-2); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.09); }
+  @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
 
-  .cta {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--lime); color: var(--ink); font-family: 'Fredoka', sans-serif;
-    font-weight: 700; font-size: 18px; letter-spacing: 0.5px; text-transform: uppercase;
-    text-decoration: none; padding: 16px 32px; border-radius: 18px;
-    border-bottom: 6px solid var(--lime-edge); transition: transform .08s ease;
+  header { padding: 96px 0 72px; text-align: center; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 500;
+    color: var(--text-dim); padding: 7px 15px; border: 1px solid var(--border);
+    border-radius: 999px; background: var(--surface); margin-bottom: 30px;
   }
-  .cta:active { transform: translateY(3px); border-bottom-width: 3px; }
-  .cta.soon { background: var(--oatmeal); border-bottom-color: var(--border-soft); color: var(--taupe); cursor: default; }
+  .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #22D3EE; box-shadow: 0 0 10px #22D3EE; }
+  h1.hero { font-size: clamp(40px, 7vw, 78px); line-height: 1.03; font-weight: 700; }
+  .hero-sub { max-width: 600px; margin: 26px auto 38px; font-size: clamp(16px, 2.2vw, 19px); color: var(--text-dim); }
+  .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-  /* Features */
-  .features { padding: 48px 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .stats { display: flex; gap: 56px; justify-content: center; flex-wrap: wrap; margin-top: 72px; padding-top: 44px; border-top: 1px solid var(--border); }
+  .stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; }
+  .stat .lbl { font-size: 13.5px; color: var(--text-faint); margin-top: 4px; }
+
+  section { padding: 92px 0; }
+  .sec-head { max-width: 640px; margin-bottom: 52px; }
+  .sec-tag { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+  .sec-title { font-size: clamp(28px, 4.5vw, 44px); font-weight: 700; line-height: 1.12; margin-top: 14px; }
+  .sec-desc { color: var(--text-dim); font-size: 17px; margin-top: 16px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px, 1fr)); gap: 18px; }
   .card {
-    background: var(--paper); border: 2px solid var(--border-soft); border-radius: 22px;
-    padding: 28px 24px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+    padding: 30px 26px; transition: border-color .2s, transform .2s, background .2s;
   }
-  .card .emoji { font-size: 30px; }
-  .card h3 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 19px; color: var(--cocoa); margin: 12px 0 6px; }
-  .card p { font-size: 15px; color: var(--taupe); }
+  .card:hover { border-color: var(--border-2); transform: translateY(-4px); background: var(--surface-2); }
+  .card .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 9px; }
+  .card p { color: var(--text-dim); font-size: 15px; }
 
-  /* Footer */
-  footer { text-align: center; padding: 56px 0 48px; color: var(--taupe); font-size: 14px; }
-  footer a { color: var(--grape); text-decoration: none; font-weight: 700; }
-  footer a:hover { text-decoration: underline; }
-  .footer-links { margin-bottom: 12px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-
-  @media (max-width: 600px) {
-    h1 { font-size: 42px; }
-    header { padding: 52px 0 40px; }
+  .work-card {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; align-items: stretch;
+    background: var(--bg-2); border: 1px solid var(--border); border-radius: 24px; overflow: hidden;
+    transition: border-color .2s, transform .2s;
   }
+  .work-card:hover { border-color: var(--border-2); transform: translateY(-4px); }
+  .work-info { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; }
+  .pill { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #22D3EE; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.25); padding: 5px 12px; border-radius: 999px; margin-bottom: 20px; }
+  .work-info h3 { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+  .work-info p { color: var(--text-dim); font-size: 16px; margin-bottom: 26px; }
+  .work-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text); }
+  .work-link .arrow { transition: transform .2s; }
+  .work-card:hover .work-link .arrow { transform: translateX(5px); }
+  .work-visual {
+    background: radial-gradient(circle at 50% 40%, #1a1330, #0c0c14);
+    display: flex; align-items: center; justify-content: center; position: relative; min-height: 320px;
+  }
+  .tile {
+    width: 132px; height: 132px; border-radius: 28px; background: #17131f;
+    border: 1px solid rgba(255,255,255,0.08); position: relative;
+    box-shadow: 0 30px 80px rgba(124,92,255,0.25);
+  }
+  .tile .d { position: absolute; border-radius: 50%; }
+  .tile .a { width: 30px; height: 30px; top: 32px; left: 50px; background: #F8A933; border: 4px solid #22D3EE; }
+  .tile .b { width: 26px; height: 26px; bottom: 30px; left: 28px; background: #ECECF2; }
+  .tile .c { width: 26px; height: 26px; bottom: 30px; right: 28px; background: #ECECF2; }
+  @media (max-width: 760px) { .work-card { grid-template-columns: 1fr; } .work-visual { min-height: 240px; order: -1; } }
+
+  .cta-band { text-align: center; background: var(--bg-2); border: 1px solid var(--border); border-radius: 26px; padding: 64px 32px; position: relative; overflow: hidden; }
+  .cta-band h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4.5vw, 42px); font-weight: 700; margin-bottom: 16px; }
+  .cta-band p { color: var(--text-dim); font-size: 17px; max-width: 480px; margin: 0 auto 32px; }
+
+  footer { border-top: 1px solid var(--border); padding: 48px 0; }
+  .foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+  .foot-links { display: flex; gap: 26px; }
+  .foot-links a { color: var(--text-dim); font-size: 14.5px; transition: color .15s; }
+  .foot-links a:hover { color: var(--text); }
+  .foot-copy { color: var(--text-faint); font-size: 14px; }
+
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="/"><span class="mark">A</span> ASTIQ</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">Start a project</a>
+      </div>
+    </div>
+  </nav>
+
   <header>
     <div class="wrap">
-      <div class="logo-tile">
-        <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+      <div class="eyebrow reveal"><span class="dot"></span> Custom app studio</div>
+      <h1 class="hero display reveal">We build <span class="grad-text">custom apps</span><br />people love to use.</h1>
+      <p class="hero-sub reveal">ASTIQ designs and ships polished mobile and web products — from the first sketch to the App Store. One team, idea to launch.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#contact">Start a project</a>
+        <a class="btn btn-ghost" href="#work">See our work →</a>
       </div>
-      <h1>ASTIQ <span class="accent">Cryptogram</span></h1>
-      <p class="tagline">Decode • Deduce • Solve</p>
-      <div class="accent-line"></div>
-      <p class="lede">
-        A cozy word-puzzle game. Crack coded quotes by figuring out which letter is which,
-        work your way through ten difficulty tiers, and climb the global leaderboard.
-      </p>
-      <a class="cta soon" href="#" aria-disabled="true">Coming soon to Google Play</a>
+
+      <div class="stats reveal">
+        <div class="stat"><div class="num grad-text">Idea → Store</div><div class="lbl">Full product lifecycle</div></div>
+        <div class="stat"><div class="num grad-text">iOS · Android · Web</div><div class="lbl">Cross-platform</div></div>
+        <div class="stat"><div class="num grad-text">Design-led</div><div class="lbl">Pixel-obsessed builds</div></div>
+      </div>
     </div>
   </header>
 
-  <section class="wrap">
-    <div class="features">
-      <div class="card">
-        <div class="emoji">🔍</div>
-        <h3>Decode the quote</h3>
-        <p>Every puzzle is a famous quote in disguise. Substitute letters and watch the message reveal itself.</p>
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag grad-text">What we do</div>
+        <h2 class="sec-title display">Everything it takes to ship a great app.</h2>
+        <p class="sec-desc">We handle the whole stack — product thinking, design, engineering, and release — so you get one accountable team instead of five vendors.</p>
       </div>
-      <div class="card">
-        <div class="emoji">📈</div>
-        <h3>Ten difficulty tiers</h3>
-        <p>From gentle warm-ups to fiendish ciphers. Earn stars for clean solves and keep your streak alive.</p>
+      <div class="grid">
+        <div class="card reveal"><div class="ic">📱</div><h3>Mobile apps</h3><p>Native-quality iOS and Android apps built with React Native and Expo, tuned for performance and feel.</p></div>
+        <div class="card reveal"><div class="ic">🖥️</div><h3>Web apps</h3><p>Fast, modern web products and dashboards — responsive, accessible, and built to scale.</p></div>
+        <div class="card reveal"><div class="ic">✏️</div><h3>Product design</h3><p>Interface and experience design that turns a rough idea into something people actually want to use.</p></div>
+        <div class="card reveal"><div class="ic">🚀</div><h3>Launch &amp; growth</h3><p>Store submission, analytics, ads, and the backend plumbing to take you live and keep you running.</p></div>
       </div>
-      <div class="card">
-        <div class="emoji">🏆</div>
-        <h3>Global leaderboard</h3>
-        <p>See how your level and score stack up against players around the world.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag grad-text">Selected work</div>
+        <h2 class="sec-title display">Products we've built.</h2>
       </div>
-      <div class="card">
-        <div class="emoji">💡</div>
-        <h3>Smart boosters</h3>
-        <p>Reveal, Solve, and Extra-Guess boosters help you through the tricky ones when you're stuck.</p>
+      <a class="work-card reveal" href="/cryptogram">
+        <div class="work-info">
+          <span class="pill">Word game · iOS &amp; Android</span>
+          <h3>ASTIQ Cryptogram</h3>
+          <p>A cozy cryptogram puzzle game — decode hidden quotes across ten difficulty tiers and climb a global leaderboard. Built end to end: design, gameplay engine, Firebase backend, and store release.</p>
+          <span class="work-link">View project <span class="arrow">→</span></span>
+        </div>
+        <div class="work-visual">
+          <div class="tile"><span class="d a"></span><span class="d b"></span><span class="d c"></span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2 class="display">Have an idea? Let's build it.</h2>
+        <p>Tell us what you're picturing. We'll help shape it into something real and shippable.</p>
+        <a class="btn btn-primary" href="mailto:alnahash@gmail.com">Get in touch →</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="wrap">
-      <div class="footer-links">
-        <a href="/privacy">Privacy Policy</a>
+    <div class="wrap foot-inner">
+      <a class="brand" href="/"><span class="mark">A</span> ASTIQ</a>
+      <div class="foot-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="/cryptogram">Cryptogram</a>
         <a href="mailto:alnahash@gmail.com">Contact</a>
       </div>
-      <p>© 2026 Alnahash · ASTIQ Cryptogram</p>
+      <div class="foot-copy">© 2026 ASTIQ</div>
     </div>
   </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4 * 60) + 'ms'; obs.observe(el); });
+  </script>
 </body>
 </html>
