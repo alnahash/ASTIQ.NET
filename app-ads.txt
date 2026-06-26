@@ -1,0 +1,10 @@
+# app-ads.txt for astiq.net — AdMob authorized sellers
+#
+# Fill this in AFTER creating the AdMob account. In the AdMob console go to
+# "App settings" and copy the exact line it provides, which looks like:
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#
+# Then redeploy. AdMob crawls https://astiq.net/app-ads.txt to verify
+# authorized sellers for the app's ads. Until the real publisher ID is added,
+# this file intentionally declares no sellers.

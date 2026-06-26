@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ASTIQ Cryptogram — Decode • Deduce • Solve</title>
+<meta name="description" content="ASTIQ Cryptogram is a word puzzle game where you decode hidden quotes by substituting letters. Solve cryptograms across 10 difficulty levels and climb the global leaderboard." />
+<meta property="og:title" content="ASTIQ Cryptogram" />
+<meta property="og:description" content="Decode hidden quotes. Climb the leaderboard. A cozy cryptogram puzzle game." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --canvas: #FBF1DD;
+    --oatmeal: #F2E3C6;
+    --paper: #FFFDF6;
+    --border-soft: #E8D7B6;
+    --ink: #34221A;
+    --cocoa: #4A3324;
+    --taupe: #8C6A4F;
+    --lime: #A8CB53;
+    --lime-edge: #6E9A2C;
+    --grape: #7B5BD0;
+    --grape-edge: #573B9E;
+    --amber: #F8A933;
+    --sky: #5BB6D6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', -apple-system, Segoe UI, Roboto, sans-serif;
+    background: var(--canvas);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header / hero */
+  header { padding: 72px 0 56px; text-align: center; }
+  .logo-tile {
+    width: 88px; height: 88px; border-radius: 20px; background: #20180F;
+    display: inline-flex; align-items: center; justify-content: center; margin-bottom: 28px;
+    position: relative;
+  }
+  .logo-tile .dot { position: absolute; border-radius: 50%; }
+  .logo-tile .d1 { width: 22px; height: 22px; background: var(--amber); border: 3px solid var(--sky); top: 22px; left: 33px; }
+  .logo-tile .d2 { width: 20px; height: 20px; background: var(--canvas); bottom: 20px; left: 20px; }
+  .logo-tile .d3 { width: 20px; height: 20px; background: var(--canvas); bottom: 20px; right: 20px; }
+
+  h1 {
+    font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 56px;
+    letter-spacing: -1px; color: var(--ink); line-height: 1.05;
+  }
+  h1 .accent { color: var(--grape); }
+  .tagline {
+    font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 22px;
+    color: var(--taupe); margin-top: 12px;
+  }
+  .accent-line { width: 120px; height: 4px; background: var(--lime); border-radius: 999px; margin: 24px auto; }
+  .lede { font-size: 19px; color: var(--cocoa); max-width: 620px; margin: 0 auto 36px; }
+
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--lime); color: var(--ink); font-family: 'Fredoka', sans-serif;
+    font-weight: 700; font-size: 18px; letter-spacing: 0.5px; text-transform: uppercase;
+    text-decoration: none; padding: 16px 32px; border-radius: 18px;
+    border-bottom: 6px solid var(--lime-edge); transition: transform .08s ease;
+  }
+  .cta:active { transform: translateY(3px); border-bottom-width: 3px; }
+  .cta.soon { background: var(--oatmeal); border-bottom-color: var(--border-soft); color: var(--taupe); cursor: default; }
+
+  /* Features */
+  .features { padding: 48px 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--paper); border: 2px solid var(--border-soft); border-radius: 22px;
+    padding: 28px 24px;
+  }
+  .card .emoji { font-size: 30px; }
+  .card h3 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 19px; color: var(--cocoa); margin: 12px 0 6px; }
+  .card p { font-size: 15px; color: var(--taupe); }
+
+  /* Footer */
+  footer { text-align: center; padding: 56px 0 48px; color: var(--taupe); font-size: 14px; }
+  footer a { color: var(--grape); text-decoration: none; font-weight: 700; }
+  footer a:hover { text-decoration: underline; }
+  .footer-links { margin-bottom: 12px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 42px; }
+    header { padding: 52px 0 40px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo-tile">
+        <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+      </div>
+      <h1>ASTIQ <span class="accent">Cryptogram</span></h1>
+      <p class="tagline">Decode • Deduce • Solve</p>
+      <div class="accent-line"></div>
+      <p class="lede">
+        A cozy word-puzzle game. Crack coded quotes by figuring out which letter is which,
+        work your way through ten difficulty tiers, and climb the global leaderboard.
+      </p>
+      <a class="cta soon" href="#" aria-disabled="true">Coming soon to Google Play</a>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="features">
+      <div class="card">
+        <div class="emoji">🔍</div>
+        <h3>Decode the quote</h3>
+        <p>Every puzzle is a famous quote in disguise. Substitute letters and watch the message reveal itself.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">📈</div>
+        <h3>Ten difficulty tiers</h3>
+        <p>From gentle warm-ups to fiendish ciphers. Earn stars for clean solves and keep your streak alive.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🏆</div>
+        <h3>Global leaderboard</h3>
+        <p>See how your level and score stack up against players around the world.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">💡</div>
+        <h3>Smart boosters</h3>
+        <p>Reveal, Solve, and Extra-Guess boosters help you through the tricky ones when you're stuck.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:alnahash@gmail.com">Contact</a>
+      </div>
+      <p>© 2026 Alnahash · ASTIQ Cryptogram</p>
+    </div>
+  </footer>
+</body>
+</html>
