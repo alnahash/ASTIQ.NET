@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Value Board &#8212; ASTIQ</title>
+<meta name="description" content="Football markets where a bookmaker's price differs from the sharp market. Research output, updated daily. Not betting advice." />
+<meta property="og:title" content="Value Board &#8212; ASTIQ" />
+<meta property="og:description" content="Football markets priced against the sharp line. Research output, updated daily." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="/assets/favicon.png" />
+<link rel="apple-touch-icon" href="/assets/astiq-logo.png" />
+<meta property="og:image" content="/assets/astiq-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #07070B; --bg-2: #0D0D14;
+    --surface: rgba(255,255,255,0.025); --surface-2: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.09); --border-2: rgba(255,255,255,0.16);
+    --text: #ECECF2; --text-dim: #9595A6; --text-faint: #61616F;
+    --orange: #FF7A00; --amber: #FFB347;
+    --grad: linear-gradient(120deg, #FF5E1A 0%, #FF8A1E 48%, #FFB347 100%);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
+  .grad-text {
+    background: var(--grad); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  .glow { position: fixed; border-radius: 50%; filter: blur(110px); opacity: .45; z-index: -1; pointer-events: none; }
+  .glow-1 { width: 600px; height: 600px; background: #FF7A00; top: -260px; left: -180px; }
+  .glow-2 { width: 480px; height: 480px; background: #FF8A1E; bottom: -220px; right: -160px; opacity: .25; }
+
+  nav { border-bottom: 1px solid var(--border); position: sticky; top: 0;
+        background: rgba(7,7,11,.82); backdrop-filter: blur(14px); z-index: 20; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700; font-size: 19px; letter-spacing: .02em; }
+  .mark { width: 32px; height: 32px; border-radius: 9px; object-fit: cover; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 34px; }
+  .nav-links a { color: var(--text-dim); font-size: 14.5px; font-weight: 500; transition: color .15s; }
+  .nav-links a:hover { color: var(--text); }
+
+  header { padding: 72px 0 40px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 500;
+             color: var(--text-dim); padding: 7px 15px; border: 1px solid var(--border);
+             border-radius: 999px; background: var(--surface); margin-bottom: 28px; }
+  .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #FF8A1E; box-shadow: 0 0 10px #FF8A1E; }
+  h1 { font-size: clamp(38px, 6.5vw, 68px); line-height: 1.02; font-weight: 700; margin: 0 0 20px; }
+  .sub { color: var(--text-dim); font-size: 17px; max-width: 62ch; margin: 0 0 34px; }
+
+  .stats { display: grid; gap: 1px; background: var(--border);
+           grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+           border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .stat { background: var(--bg-2); padding: 18px 20px; }
+  .num-big { font-family: 'Space Grotesk', sans-serif; font-size: 27px; font-weight: 700;
+             letter-spacing: -.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .lbl { color: var(--text-faint); font-size: 12.5px; margin-top: 4px; }
+
+  section { padding: 46px 0 0; }
+  .sec-tag { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600;
+             letter-spacing: .13em; text-transform: uppercase; margin-bottom: 12px; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px,3.4vw,34px);
+       font-weight: 700; letter-spacing: -.02em; margin: 0 0 14px; }
+  p { color: var(--text-dim); max-width: 68ch; }
+
+  .board { border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+           background: var(--bg-2); margin-top: 26px; }
+  .board-head { display: flex; justify-content: space-between; align-items: baseline;
+                padding: 16px 22px; border-bottom: 1px solid var(--border); background: var(--surface); }
+  .board-head b { font-family: 'Space Grotesk', sans-serif; font-size: 15px; }
+  .board-head span { color: var(--text-faint); font-size: 12.5px; }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 720px; }
+  th { text-align: left; font-size: 11.5px; font-weight: 600; letter-spacing: .1em;
+       text-transform: uppercase; color: var(--text-faint); padding: 13px 18px;
+       border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th.num, td.num { text-align: right; }
+  td { padding: 15px 18px; border-bottom: 1px solid rgba(255,255,255,.05); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  .tm { display: block; font-weight: 600; font-size: 14.5px; }
+  .meta { display: block; color: var(--text-faint); font-size: 12px; margin-top: 3px; }
+  .pick { font-weight: 600; font-size: 14.5px; }
+  .mk { display: block; color: var(--text-faint); font-size: 11.5px; font-weight: 400;
+        letter-spacing: .05em; margin-top: 2px; }
+  .bk { color: var(--text-dim); font-size: 13.5px; }
+  .odds, .fair { font-family: 'Space Grotesk', sans-serif; font-variant-numeric: tabular-nums; }
+  .odds { font-size: 17px; font-weight: 700; }
+  .fair { color: var(--text-faint); font-size: 14px; }
+  .edge { min-width: 120px; }
+  .ev { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;
+        font-variant-numeric: tabular-nums; }
+  .track { display: block; width: 92px; height: 4px; border-radius: 3px;
+           background: rgba(255,255,255,.08); margin: 7px 0 0 auto; overflow: hidden; }
+  .fill { display: block; height: 4px; background: var(--grad); }
+  .empty { text-align: center; color: var(--text-faint); padding: 40px 20px; }
+
+  .cards { display: grid; gap: 1px; background: var(--border); margin-top: 26px;
+           grid-template-columns: repeat(auto-fit, minmax(268px,1fr));
+           border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .card { background: var(--bg-2); padding: 22px; }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600;
+             letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 9px; }
+  .card p { margin: 0; font-size: 14px; }
+
+  .notice { margin-top: 46px; border: 1px solid var(--border); border-radius: 14px;
+            background: var(--surface); padding: 22px 24px; }
+  .notice h3 { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600;
+               letter-spacing: .1em; text-transform: uppercase; color: var(--amber); margin: 0 0 10px; }
+  .notice p { font-size: 13.5px; margin: 0 0 9px; max-width: none; }
+  .notice p:last-child { margin-bottom: 0; }
+
+  footer { margin-top: 64px; border-top: 1px solid var(--border); padding: 30px 0 46px; }
+  .foot-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; justify-content: space-between; }
+  .foot-links { display: flex; gap: 26px; flex-wrap: wrap; }
+  .foot-links a { color: var(--text-dim); font-size: 14px; }
+  .foot-links a:hover { color: var(--text); }
+  .foot-copy { color: var(--text-faint); font-size: 13px; }
+  :focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+  @media (max-width: 640px) { .wrap { padding: 0 18px; } header { padding: 48px 0 30px; } }
+</style>
+</head>
+<body>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img class="mark" src="/assets/astiq-logo.png" alt="ASTIQ logo" /> ASTIQ</a>
+    <div class="nav-links">
+      <a href="/#apps">Apps</a>
+      <a href="/#about">About</a>
+      <a href="mailto:hello@astiq.net">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Updated 26 Aug 2026, 16:33 UTC</div>
+    <h1 class="display">Value <span class="grad-text">board.</span></h1>
+    <p class="sub">Football markets where a bookmaker&rsquo;s price sits meaningfully
+      longer than the sharp market&rsquo;s. Generated by comparing every book against
+      Pinnacle&rsquo;s margin-free line across 7 leagues.
+      Research output, published as-is.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num-big grad-text">10</div><div class="lbl">Open selections</div></div>
+      <div class="stat"><div class="num-big grad-text">+3.5%</div><div class="lbl">Mean edge vs sharp line</div></div>
+      <div class="stat"><div class="num-big">24</div><div class="lbl">Leagues monitored</div></div>
+      <div class="stat"><div class="num-big">Daily</div><div class="lbl">Refresh cadence</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="board">
+      <div class="board-head">
+        <b>Current board</b>
+        <span>soonest kick-off first &#183; edge bar scaled to 6%</span>
+      </div>
+      <div class="scroll">
+        <table>
+          <thead><tr>
+            <th>Fixture</th><th>Selection</th><th>Book</th>
+            <th class="num">Odds</th><th class="num">Fair</th><th class="num">Edge</th>
+          </tr></thead>
+          <tbody>
+      <tr>
+        <td class="fix"><span class="tm">Stade Lavallois v Grenoble</span>
+          <span class="meta">Fri 28 Aug &#183; 18:00 UTC &#183; Ligue 2 - France</span></td>
+        <td class="pick">Draw<span class="mk">1X2</span></td>
+        <td class="bk">coolbet</td>
+        <td class="num odds">3.25</td>
+        <td class="num fair">3.05</td>
+        <td class="num edge"><span class="ev grad-text">+6.6%</span>
+          <span class="track"><span class="fill" style="width:100%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Alav&#233;s v Villarreal</span>
+          <span class="meta">Fri 28 Aug &#183; 19:30 UTC &#183; La Liga - Spain</span></td>
+        <td class="pick">Alav&#233;s<span class="mk">1X2</span></td>
+        <td class="bk">unibet_se</td>
+        <td class="num odds">3.30</td>
+        <td class="num fair">3.22</td>
+        <td class="num edge"><span class="ev grad-text">+2.5%</span>
+          <span class="track"><span class="fill" style="width:41%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Union Berlin v Eintracht Frankfurt</span>
+          <span class="meta">Sat 29 Aug &#183; 13:30 UTC &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Eintracht Frankfurt<span class="mk">1X2</span></td>
+        <td class="bk">unibet_se</td>
+        <td class="num odds">2.85</td>
+        <td class="num fair">2.78</td>
+        <td class="num edge"><span class="ev grad-text">+2.4%</span>
+          <span class="track"><span class="fill" style="width:41%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Blackburn Rovers v Queens Park Rangers</span>
+          <span class="meta">Sat 29 Aug &#183; 14:00 UTC &#183; Championship</span></td>
+        <td class="pick">Queens Park Rangers<span class="mk">1X2</span></td>
+        <td class="bk">leovegas_se</td>
+        <td class="num odds">3.25</td>
+        <td class="num fair">3.09</td>
+        <td class="num edge"><span class="ev grad-text">+5.2%</span>
+          <span class="track"><span class="fill" style="width:86%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Stevenage v Doncaster Rovers</span>
+          <span class="meta">Sat 29 Aug &#183; 14:00 UTC &#183; League 1</span></td>
+        <td class="pick">Doncaster Rovers<span class="mk">1X2</span></td>
+        <td class="bk">tipico_de</td>
+        <td class="num odds">3.60</td>
+        <td class="num fair">3.50</td>
+        <td class="num edge"><span class="ev grad-text">+2.9%</span>
+          <span class="track"><span class="fill" style="width:49%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Coventry City v Hull City</span>
+          <span class="meta">Sat 29 Aug &#183; 14:00 UTC &#183; EPL</span></td>
+        <td class="pick">Draw<span class="mk">1X2</span></td>
+        <td class="bk">betfred_uk</td>
+        <td class="num odds">3.75</td>
+        <td class="num fair">3.66</td>
+        <td class="num edge"><span class="ev grad-text">+2.4%</span>
+          <span class="track"><span class="fill" style="width:41%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Strasbourg v RC Lens</span>
+          <span class="meta">Sat 29 Aug &#183; 15:15 UTC &#183; Ligue 1 - France</span></td>
+        <td class="pick">Draw<span class="mk">1X2</span></td>
+        <td class="bk">coolbet</td>
+        <td class="num odds">3.75</td>
+        <td class="num fair">3.63</td>
+        <td class="num edge"><span class="ev grad-text">+3.2%</span>
+          <span class="track"><span class="fill" style="width:53%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Deportivo La Coru&#241;a v Valencia</span>
+          <span class="meta">Sun 30 Aug &#183; 17:30 UTC &#183; La Liga - Spain</span></td>
+        <td class="pick">Draw<span class="mk">1X2</span></td>
+        <td class="bk">unibet_nl</td>
+        <td class="num odds">3.25</td>
+        <td class="num fair">3.13</td>
+        <td class="num edge"><span class="ev grad-text">+3.8%</span>
+          <span class="track"><span class="fill" style="width:64%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">AS Monaco v Marseille</span>
+          <span class="meta">Sun 30 Aug &#183; 18:45 UTC &#183; Ligue 1 - France</span></td>
+        <td class="pick">AS Monaco<span class="mk">1X2</span></td>
+        <td class="bk">unibet_se</td>
+        <td class="num odds">2.65</td>
+        <td class="num fair">2.57</td>
+        <td class="num edge"><span class="ev grad-text">+3.1%</span>
+          <span class="track"><span class="fill" style="width:51%"></span></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">AS Monaco v Marseille</span>
+          <span class="meta">Sun 30 Aug &#183; 18:45 UTC &#183; Ligue 1 - France</span></td>
+        <td class="pick">Draw<span class="mk">1X2</span></td>
+        <td class="bk">coolbet</td>
+        <td class="num odds">4.00</td>
+        <td class="num fair">3.89</td>
+        <td class="num edge"><span class="ev grad-text">+2.7%</span>
+          <span class="track"><span class="fill" style="width:46%"></span></span></td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-tag grad-text">Method</div>
+    <h2 class="display">How these are found</h2>
+    <p>No outcome is being predicted. A separate study of 46,596 matches found that
+      models trained on public data land measurably behind the bookmaker&rsquo;s own
+      line, so nothing here attempts to out-forecast the market.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Sharp reference</h3>
+        <p>Pinnacle&rsquo;s price is stripped of its margin to get a fair line.
+          Books quoting longer than fair are the ones out of step.</p>
+      </div>
+      <div class="card">
+        <h3>No self-reference</h3>
+        <p>The book being judged is excluded from the benchmark judging it,
+          so an outlier can never drag its own reference toward itself.</p>
+      </div>
+      <div class="card">
+        <h3>Worst-case pricing</h3>
+        <p>Every selection is priced under three different margin models and the
+          least favourable result is the one shown.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="notice">
+      <h3>Please read</h3>
+      <p><b>This is not betting advice, a tip service, or a prediction.</b> It is the
+        output of a research tool that compares public odds between bookmakers and
+        reports where they disagree. No claim is made that following it is profitable.</p>
+      <p>The edges shown are small and unverified. Whether they represent real value
+        has not been established &mdash; that requires tracking closing-line value over
+        hundreds of settled bets, which has not yet been done. Prices move constantly
+        and may be unavailable or different by the time you see them.</p>
+      <p>Gambling carries financial risk and can be addictive. Only ever stake money you
+        can afford to lose. <b>18+.</b> Betting is restricted or unlawful in many
+        jurisdictions, including some where this page may be read &mdash; complying with
+        your local law is your own responsibility. Support:
+        <a href="https://www.begambleaware.org" style="color:var(--amber)">BeGambleAware.org</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <a class="brand" href="/"><img class="mark" src="/assets/astiq-logo.png" alt="ASTIQ logo" /> ASTIQ</a>
+    <div class="foot-links">
+      <a href="/#apps">Apps</a>
+      <a href="/#about">About</a>
+      <a href="/cryptogram">Cryptogram</a>
+      <a href="mailto:hello@astiq.net">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 ASTIQ</div>
+  </div>
+</footer>
+</body>
+</html>
