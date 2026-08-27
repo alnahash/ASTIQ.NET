@@ -235,6 +235,9 @@
                 font-variant-numeric: tabular-nums; }
   .sl-odds { font-size: 16px; }
   .sl-alt { color: var(--text-faint); font-size: 12px; margin-top: 8px; }
+  .lg-head { font-family: 'Space Grotesk', sans-serif; font-size: 11.5px;
+             font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+             color: var(--amber); background: var(--surface); padding: 9px 18px; }
   .sl-empty { background: var(--bg-2); text-align: center; color: var(--text-faint);
               padding: 40px 20px; font-size: 14px; }
   @media (max-width: 560px) { .sl { gap: 13px; padding: 18px 16px; }
@@ -1658,10 +1661,19 @@
       single Elo number was zero. The results table has one real dimension in
       it, and this reads it off.</p>
 
+    <p><b>Ratings are only comparable within a league.</b> These competitions
+      never play each other, so their scales are linked by nothing at all and
+      ranking Bayern against Barcelona here would be meaningless. England is
+      the exception: clubs move between its two tiers every season, so a
+      measured offset of 272.7 points puts the Championship on the Premier
+      League&rsquo;s scale. Without it a promoted side arrives rated above half
+      the division it just joined &mdash; Coventry read 1683 before the
+      correction and 1426 after it.</p>
+
     <div class="board">
       <div class="board-head">
         <b>Current ratings</b>
-        <span>strongest 12 of 156 rated clubs &middot; 1500 is average</span>
+        <span>top 5 per league &middot; 1500 is that league&rsquo;s average</span>
       </div>
       <div class="scroll">
         <table>
@@ -1674,10 +1686,10 @@
       <tr><td class="num fair">5</td><td class="pick">PSV</td><td class="num odds">1752</td></tr>
       <tr><td class="num fair">6</td><td class="pick">Barcelona</td><td class="num odds">1743</td></tr>
       <tr><td class="num fair">7</td><td class="pick">FC Porto</td><td class="num odds">1738</td></tr>
-      <tr><td class="num fair">8</td><td class="pick">Arsenal</td><td class="num odds">1728</td></tr>
+      <tr><td class="num fair">8</td><td class="pick">Arsenal</td><td class="num odds">1712</td></tr>
       <tr><td class="num fair">9</td><td class="pick">Manchester City</td><td class="num odds">1703</td></tr>
       <tr><td class="num fair">10</td><td class="pick">Real Madrid C.F.</td><td class="num odds">1690</td></tr>
-      <tr><td class="num fair">11</td><td class="pick">Coventry City FC</td><td class="num odds">1683</td></tr>
+      <tr><td class="num fair">11</td><td class="pick">West Ham United</td><td class="num odds">1686</td></tr>
       <tr><td class="num fair">12</td><td class="pick">Paris Saint-Germain</td><td class="num odds">1680</td></tr>
           </tbody>
         </table>
@@ -1699,39 +1711,49 @@
       <tr>
         <td class="fix"><span class="tm">Coventry City v Hull City</span>
           <span class="meta">Sat 29 Aug &#183; 17:00 GMT+3 &#183; EPL</span></td>
-        <td class="num"><span class="mdl">+103</span>
+        <td class="num"><span class="mdl">+110</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">57% / 24% / 18%</span>
+        <td class="num"><span class="mdl">58% / 24% / 18%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">30% / 28% / 42%</span>
+          <span class="mev">goals model &middot; 28% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Watford v West Ham United</span>
+          <span class="meta">Sat 29 Aug &#183; 17:00 GMT+3 &#183; Championship</span></td>
+        <td class="num"><span class="mdl">-244</span>
+          <span class="mev">rating gap</span></td>
+        <td class="num"><span class="mdl">15% / 26% / 59%</span>
+          <span class="mev">our Elo</span></td>
+        <td class="num"><span class="mdl">39% / 29% / 32%</span>
           <span class="mev">goals model &middot; 27% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Norwich City v Burnley</span>
-          <span class="meta">Sat 29 Aug &#183; 17:00 GMT+3 &#183; Championship</span></td>
-        <td class="num"><span class="mdl">+251</span>
+        <td class="fix"><span class="tm">Manchester United v Ipswich Town</span>
+          <span class="meta">Sun 30 Aug &#183; 18:30 GMT+3 &#183; EPL</span></td>
+        <td class="num"><span class="mdl">+223</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">75% / 17% / 8%</span>
+        <td class="num"><span class="mdl">72% / 19% / 10%</span>
           <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">50% / 27% / 24%</span>
-          <span class="mev">goals model &middot; 25% apart</span></td>
+        <td class="num"><span class="mdl">52% / 24% / 24%</span>
+          <span class="mev">goals model &middot; 20% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Wolverhampton Wanderers v Stoke City</span>
           <span class="meta">Sat 29 Aug &#183; 14:30 GMT+3 &#183; Championship</span></td>
-        <td class="num"><span class="mdl">-64</span>
+        <td class="num"><span class="mdl">+196</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">34% / 29% / 37%</span>
+        <td class="num"><span class="mdl">69% / 20% / 11%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">52% / 26% / 21%</span>
-          <span class="mev">goals model &middot; 18% apart</span></td>
+          <span class="mev">goals model &middot; 17% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Juventus v Parma</span>
           <span class="meta">Sat 29 Aug &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="num"><span class="mdl">+222</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">72% / 18% / 10%</span>
+        <td class="num"><span class="mdl">72% / 19% / 10%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">58% / 25% / 17%</span>
           <span class="mev">goals model &middot; 14% apart</span></td>
@@ -1741,29 +1763,9 @@
           <span class="meta">Sun 30 Aug &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="num"><span class="mdl">+104</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">58% / 24% / 18%</span>
+        <td class="num"><span class="mdl">57% / 24% / 18%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">44% / 28% / 28%</span>
-          <span class="mev">goals model &middot; 14% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Manchester United v Ipswich Town</span>
-          <span class="meta">Sun 30 Aug &#183; 18:30 GMT+3 &#183; EPL</span></td>
-        <td class="num"><span class="mdl">-33</span>
-          <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">38% / 28% / 33%</span>
-          <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">52% / 24% / 24%</span>
-          <span class="mev">goals model &middot; 13% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Aston Villa v Arsenal</span>
-          <span class="meta">Mon 31 Aug &#183; 22:00 GMT+3 &#183; EPL</span></td>
-        <td class="num"><span class="mdl">-208</span>
-          <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">17% / 27% / 55%</span>
-          <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">28% / 30% / 42%</span>
           <span class="mev">goals model &middot; 13% apart</span></td>
       </tr>
       <tr>
@@ -1777,31 +1779,31 @@
           <span class="mev">goals model &middot; 13% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Middlesbrough v West Bromwich Albion</span>
-          <span class="meta">Sat 29 Aug &#183; 14:30 GMT+3 &#183; Championship</span></td>
-        <td class="num"><span class="mdl">+113</span>
-          <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">59% / 24% / 17%</span>
-          <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">46% / 31% / 23%</span>
-          <span class="mev">goals model &middot; 13% apart</span></td>
-      </tr>
-      <tr>
         <td class="fix"><span class="tm">Alav&#233;s v Villarreal</span>
           <span class="meta">Fri 28 Aug &#183; 22:30 GMT+3 &#183; La Liga - Spain</span></td>
         <td class="num"><span class="mdl">-140</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">24% / 28% / 47%</span>
+        <td class="num"><span class="mdl">25% / 28% / 47%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">37% / 24% / 38%</span>
           <span class="mev">goals model &middot; 13% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Aston Villa v Arsenal</span>
+          <span class="meta">Mon 31 Aug &#183; 22:00 GMT+3 &#183; EPL</span></td>
+        <td class="num"><span class="mdl">-193</span>
+          <span class="mev">rating gap</span></td>
+        <td class="num"><span class="mdl">19% / 27% / 53%</span>
+          <span class="mev">our Elo</span></td>
+        <td class="num"><span class="mdl">28% / 30% / 42%</span>
+          <span class="mev">goals model &middot; 11% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Levante v Real Betis</span>
           <span class="meta">Sat 29 Aug &#183; 18:00 GMT+3 &#183; La Liga - Spain</span></td>
         <td class="num"><span class="mdl">-139</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">25% / 29% / 47%</span>
+        <td class="num"><span class="mdl">25% / 28% / 47%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">36% / 27% / 37%</span>
           <span class="mev">goals model &middot; 11% apart</span></td>
@@ -1817,11 +1819,21 @@
           <span class="mev">goals model &middot; 11% apart</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Middlesbrough v West Bromwich Albion</span>
+          <span class="meta">Sat 29 Aug &#183; 14:30 GMT+3 &#183; Championship</span></td>
+        <td class="num"><span class="mdl">+99</span>
+          <span class="mev">rating gap</span></td>
+        <td class="num"><span class="mdl">57% / 24% / 19%</span>
+          <span class="mev">our Elo</span></td>
+        <td class="num"><span class="mdl">46% / 31% / 23%</span>
+          <span class="mev">goals model &middot; 11% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Sevilla v Atl&#233;tico Madrid</span>
           <span class="meta">Sat 29 Aug &#183; 22:30 GMT+3 &#183; La Liga - Spain</span></td>
         <td class="num"><span class="mdl">-115</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">27% / 29% / 44%</span>
+        <td class="num"><span class="mdl">28% / 29% / 44%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">38% / 26% / 36%</span>
           <span class="mev">goals model &middot; 11% apart</span></td>
@@ -1831,17 +1843,17 @@
           <span class="meta">Sat 29 Aug &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
         <td class="num"><span class="mdl">-158</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">22% / 28% / 49%</span>
+        <td class="num"><span class="mdl">23% / 28% / 49%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">33% / 23% / 44%</span>
-          <span class="mev">goals model &middot; 11% apart</span></td>
+          <span class="mev">goals model &middot; 10% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Lyon v Le Havre</span>
           <span class="meta">Sat 29 Aug &#183; 21:45 GMT+3 &#183; Ligue 1 - France</span></td>
         <td class="num"><span class="mdl">+142</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">63% / 22% / 15%</span>
+        <td class="num"><span class="mdl">62% / 22% / 15%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">53% / 29% / 18%</span>
           <span class="mev">goals model &middot; 10% apart</span></td>
@@ -1854,7 +1866,7 @@
         <td class="num"><span class="mdl">12% / 25% / 63%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">20% / 26% / 54%</span>
-          <span class="mev">goals model &middot; 10% apart</span></td>
+          <span class="mev">goals model &middot; 9% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">CA Osasuna v Getafe</span>
@@ -1865,16 +1877,6 @@
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">42% / 33% / 25%</span>
           <span class="mev">goals model &middot; 9% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Charlton Athletic v Preston North End</span>
-          <span class="meta">Sat 29 Aug &#183; 17:00 GMT+3 &#183; Championship</span></td>
-        <td class="num"><span class="mdl">+43</span>
-          <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">49% / 27% / 24%</span>
-          <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">41% / 32% / 28%</span>
-          <span class="mev">goals model &middot; 8% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Wrexham AFC v Birmingham City</span>
@@ -1897,21 +1899,31 @@
           <span class="mev">goals model &middot; 8% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Watford v West Ham United</span>
+        <td class="fix"><span class="tm">Norwich City v Burnley</span>
           <span class="meta">Sat 29 Aug &#183; 17:00 GMT+3 &#183; Championship</span></td>
-        <td class="num"><span class="mdl">+24</span>
+        <td class="num"><span class="mdl">-7</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">46% / 27% / 27%</span>
+        <td class="num"><span class="mdl">42% / 28% / 30%</span>
           <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">39% / 29% / 32%</span>
+        <td class="num"><span class="mdl">50% / 27% / 24%</span>
           <span class="mev">goals model &middot; 8% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Charlton Athletic v Preston North End</span>
+          <span class="meta">Sat 29 Aug &#183; 17:00 GMT+3 &#183; Championship</span></td>
+        <td class="num"><span class="mdl">+35</span>
+          <span class="mev">rating gap</span></td>
+        <td class="num"><span class="mdl">48% / 27% / 25%</span>
+          <span class="mev">our Elo</span></td>
+        <td class="num"><span class="mdl">41% / 32% / 28%</span>
+          <span class="mev">goals model &middot; 7% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Paris FC v Nice</span>
           <span class="meta">Sun 30 Aug &#183; 16:00 GMT+3 &#183; Ligue 1 - France</span></td>
         <td class="num"><span class="mdl">+124</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">60% / 23% / 16%</span>
+        <td class="num"><span class="mdl">60% / 23% / 17%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">53% / 28% / 19%</span>
           <span class="mev">goals model &middot; 7% apart</span></td>
@@ -1927,33 +1939,13 @@
           <span class="mev">goals model &middot; 7% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Cagliari v Inter Milan</span>
-          <span class="meta">Sun 30 Aug &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
-        <td class="num"><span class="mdl">-314</span>
+        <td class="fix"><span class="tm">Bayern Munich v VfB Stuttgart</span>
+          <span class="meta">Fri 28 Aug &#183; 21:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num"><span class="mdl">+170</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">10% / 23% / 67%</span>
+        <td class="num"><span class="mdl">66% / 21% / 13%</span>
           <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">16% / 18% / 65%</span>
-          <span class="mev">goals model &middot; 7% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Groningen v Fortuna Sittard</span>
-          <span class="meta">Fri 28 Aug &#183; 21:00 GMT+3 &#183; Dutch Eredivisie</span></td>
-        <td class="num"><span class="mdl">+116</span>
-          <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">59% / 24% / 17%</span>
-          <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">53% / 25% / 22%</span>
-          <span class="mev">goals model &middot; 7% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">SC Freiburg v Werder Bremen</span>
-          <span class="meta">Sun 30 Aug &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
-        <td class="num"><span class="mdl">+115</span>
-          <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">59% / 24% / 17%</span>
-          <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">53% / 25% / 23%</span>
+        <td class="num"><span class="mdl">72% / 14% / 14%</span>
           <span class="mev">goals model &middot; 7% apart</span></td>
       </tr>
       <tr>
@@ -1967,14 +1959,34 @@
           <span class="mev">goals model &middot; 7% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Bayern Munich v VfB Stuttgart</span>
-          <span class="meta">Fri 28 Aug &#183; 21:30 GMT+3 &#183; Bundesliga - Germany</span></td>
-        <td class="num"><span class="mdl">+170</span>
+        <td class="fix"><span class="tm">Cagliari v Inter Milan</span>
+          <span class="meta">Sun 30 Aug &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
+        <td class="num"><span class="mdl">-314</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">66% / 21% / 13%</span>
+        <td class="num"><span class="mdl">10% / 23% / 67%</span>
           <span class="mev">our Elo</span></td>
-        <td class="num"><span class="mdl">72% / 14% / 14%</span>
-          <span class="mev">goals model &middot; 7% apart</span></td>
+        <td class="num"><span class="mdl">16% / 18% / 65%</span>
+          <span class="mev">goals model &middot; 6% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Groningen v Fortuna Sittard</span>
+          <span class="meta">Fri 28 Aug &#183; 21:00 GMT+3 &#183; Dutch Eredivisie</span></td>
+        <td class="num"><span class="mdl">+116</span>
+          <span class="mev">rating gap</span></td>
+        <td class="num"><span class="mdl">59% / 24% / 17%</span>
+          <span class="mev">our Elo</span></td>
+        <td class="num"><span class="mdl">53% / 25% / 22%</span>
+          <span class="mev">goals model &middot; 6% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">SC Freiburg v Werder Bremen</span>
+          <span class="meta">Sun 30 Aug &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num"><span class="mdl">+115</span>
+          <span class="mev">rating gap</span></td>
+        <td class="num"><span class="mdl">59% / 24% / 17%</span>
+          <span class="mev">our Elo</span></td>
+        <td class="num"><span class="mdl">53% / 25% / 23%</span>
+          <span class="mev">goals model &middot; 6% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Real Sociedad v Espanyol</span>
@@ -1991,7 +2003,7 @@
           <span class="meta">Sat 29 Aug &#183; 19:30 GMT+3 &#183; Bundesliga - Germany</span></td>
         <td class="num"><span class="mdl">+227</span>
           <span class="mev">rating gap</span></td>
-        <td class="num"><span class="mdl">73% / 18% / 9%</span>
+        <td class="num"><span class="mdl">72% / 18% / 9%</span>
           <span class="mev">our Elo</span></td>
         <td class="num"><span class="mdl">66% / 20% / 13%</span>
           <span class="mev">goals model &middot; 6% apart</span></td>
