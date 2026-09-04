@@ -285,7 +285,7 @@
 
 <header>
   <div class="wrap">
-    <div class="eyebrow"><span class="dot"></span> Updated 01 Sep 2026, 21:47 GMT+3</div>
+    <div class="eyebrow"><span class="dot"></span> Updated 03 Sep 2026, 00:32 GMT+3</div>
     <h1 class="display">Football <span class="grad-text">model.</span></h1>
     <p class="sub">Two independent signals on one board. A goals model predicts
       outcomes across 8 leagues; a scanner compares every bookmaker against
@@ -294,19 +294,19 @@
       single number. Research output, published as-is.</p>
 
     <div class="stats">
-      <div class="stat"><div class="num-big grad-text">39</div><div class="lbl">Open selections</div></div>
-      <div class="stat"><div class="num-big grad-text">0</div><div class="lbl">Backed by both signals</div></div>
+      <div class="stat"><div class="num-big grad-text">41</div><div class="lbl">Open selections</div></div>
+      <div class="stat"><div class="num-big grad-text">1</div><div class="lbl">Backed by both signals</div></div>
       <div class="stat"><div class="num-big">24</div><div class="lbl">Leagues monitored</div></div>
-      <div class="stat"><div class="num-big grad-text">25</div><div class="lbl">Fixtures modelled</div></div>
+      <div class="stat"><div class="num-big grad-text">43</div><div class="lbl">Fixtures modelled</div></div>
     </div>
   </div>
 </header>
 
 <div class="wrap tabbar">
   <div class="tabs" role="tablist" aria-label="Views">
-    <button class="tab is-on" id="t-bet" role="tab" aria-controls="p-bet" aria-selected="true">Bet<span class="cnt">18</span></button>
-    <button class="tab" id="t-board" role="tab" aria-controls="p-board" aria-selected="false">Full board<span class="cnt">39</span></button>
-    <button class="tab" id="t-fixtures" role="tab" aria-controls="p-fixtures" aria-selected="false">Fixtures<span class="cnt">25</span></button>
+    <button class="tab is-on" id="t-bet" role="tab" aria-controls="p-bet" aria-selected="true">Bet<span class="cnt">17</span></button>
+    <button class="tab" id="t-board" role="tab" aria-controls="p-board" aria-selected="false">Full board<span class="cnt">41</span></button>
+    <button class="tab" id="t-fixtures" role="tab" aria-controls="p-fixtures" aria-selected="false">Fixtures<span class="cnt">43</span></button>
     <button class="tab" id="t-elo" role="tab" aria-controls="p-elo" aria-selected="false">Our model<span class="cnt">208</span></button>
     <button class="tab" id="t-method" role="tab" aria-controls="p-method" aria-selected="false">Method</button>
   </div>
@@ -326,16 +326,6 @@
       bets; grey rows are predictions.</p>
 
     <ol class="blist">
-      <li class="bg">
-        <div class="bg-head">
-          <span class="bg-tm">Kilmarnock v St Mirren</span>
-          <span class="bg-when">Wed 02 Sep &#183; 21:45 GMT+3 &middot; Premiership - Scotland</span>
-        </div>
-        <div class="bg-lines">
-          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">St Mirren win</span><span class="bl-s">2.70 paddypower</span></div>
-          <div class="bl off note"><span class="bl-v">No goals model for Premiership</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
-        </div>
-      </li>
       <li class="bg">
         <div class="bg-head">
           <span class="bg-tm">Gimnasia La Plata v CA Tigre BA</span>
@@ -358,33 +348,22 @@
       </li>
       <li class="bg">
         <div class="bg-head">
+          <span class="bg-tm">Orlando City SC v San Diego FC</span>
+          <span class="bg-when">Sun 06 Sep &#183; 02:30 GMT+3 &middot; MLS</span>
+        </div>
+        <div class="bg-lines">
+          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">San Diego FC win <i>or</i> San Diego FC win</span><span class="bl-s">3.25 leovegas_se &middot; 3.20 leovegas_se</span></div>
+          <div class="bl off note"><span class="bl-v">No goals model for MLS</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
+        </div>
+      </li>
+      <li class="bg">
+        <div class="bg-head">
           <span class="bg-tm">Viborg FF v Lyngby</span>
           <span class="bg-when">Fri 04 Sep &#183; 20:00 GMT+3 &middot; Denmark Superliga</span>
         </div>
         <div class="bg-lines">
           <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Lyngby win</span><span class="bl-s">3.90 betfair_sb_uk</span></div>
           <div class="bl off note"><span class="bl-v">No goals model for Denmark Superliga</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
-        </div>
-      </li>
-      <li class="bg">
-        <div class="bg-head">
-          <span class="bg-tm">Queens Park Rangers v Cardiff City</span>
-          <span class="bg-when">Wed 02 Sep &#183; 21:45 GMT+3 &middot; Championship</span>
-        </div>
-        <div class="bg-lines">
-          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Cardiff City win</span><span class="bl-s">3.90 leovegas_se</span></div>
-          <div class="bl off"><span class="bl-k">Goals</span><span class="bl-v">Over 2.5</span><span class="bl-s">model only &middot; 59%</span></div>
-          <div class="bl off"><span class="bl-k">Both score</span><span class="bl-v">Yes</span><span class="bl-s">model only &middot; 63%</span></div>
-        </div>
-      </li>
-      <li class="bg">
-        <div class="bg-head">
-          <span class="bg-tm">Luton v Stockport County FC</span>
-          <span class="bg-when">Wed 02 Sep &#183; 21:45 GMT+3 &middot; League 1</span>
-        </div>
-        <div class="bg-lines">
-          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Stockport County FC win</span><span class="bl-s">3.25 unibet_se</span></div>
-          <div class="bl off note"><span class="bl-v">No goals model for League 1</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
         </div>
       </li>
       <li class="bg">
@@ -411,23 +390,22 @@
       </li>
       <li class="bg">
         <div class="bg-head">
-          <span class="bg-tm">Millwall v Wrexham AFC</span>
-          <span class="bg-when">Wed 02 Sep &#183; 21:45 GMT+3 &middot; Championship</span>
-        </div>
-        <div class="bg-lines">
-          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Wrexham AFC win</span><span class="bl-s">3.40 betway</span></div>
-          <div class="bl off"><span class="bl-k">Goals</span><span class="bl-v">Over 2.5</span><span class="bl-s">model only &middot; 52%</span></div>
-          <div class="bl off"><span class="bl-k">Both score</span><span class="bl-v">Yes</span><span class="bl-s">model only &middot; 56%</span></div>
-        </div>
-      </li>
-      <li class="bg">
-        <div class="bg-head">
           <span class="bg-tm">GAIS v BK Hacken</span>
           <span class="bg-when">Sat 05 Sep &#183; 16:00 GMT+3 &middot; Allsvenskan - Sweden</span>
         </div>
         <div class="bg-lines">
           <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">BK Hacken win</span><span class="bl-s">3.00 unibet_se</span></div>
           <div class="bl off note"><span class="bl-v">No goals model for Allsvenskan</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
+        </div>
+      </li>
+      <li class="bg">
+        <div class="bg-head">
+          <span class="bg-tm">Charleroi v Union Saint-Gilloise</span>
+          <span class="bg-when">Sat 05 Sep &#183; 17:00 GMT+3 &middot; Belgium First Div</span>
+        </div>
+        <div class="bg-lines">
+          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Union Saint-Gilloise win</span><span class="bl-s">2.00 betanysports</span></div>
+          <div class="bl off note"><span class="bl-v">No goals model for Belgium First Div</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
         </div>
       </li>
       <li class="bg">
@@ -453,6 +431,17 @@
       </li>
       <li class="bg">
         <div class="bg-head">
+          <span class="bg-tm">Nottingham Forest v Tottenham Hotspur</span>
+          <span class="bg-when">Sat 05 Sep &#183; 17:00 GMT+3 &middot; EPL</span>
+        </div>
+        <div class="bg-lines">
+          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Nottingham Forest win</span><span class="bl-s">2.63 unibet_nl</span></div>
+          <div class="bl off"><span class="bl-k">Goals</span><span class="bl-v">Over 2.5</span><span class="bl-s">model only &middot; 52%</span></div>
+          <div class="bl off"><span class="bl-k">Both score</span><span class="bl-v">Yes</span><span class="bl-s">model only &middot; 54%</span></div>
+        </div>
+      </li>
+      <li class="bg">
+        <div class="bg-head">
           <span class="bg-tm">FC Basel v FC Lugano</span>
           <span class="bg-when">Sun 06 Sep &#183; 17:30 GMT+3 &middot; Swiss Superleague</span>
         </div>
@@ -463,23 +452,12 @@
       </li>
       <li class="bg">
         <div class="bg-head">
-          <span class="bg-tm">Orlando City SC v San Diego FC</span>
-          <span class="bg-when">Sun 06 Sep &#183; 02:30 GMT+3 &middot; MLS</span>
+          <span class="bg-tm">Cercle Brugge KSV v Gent</span>
+          <span class="bg-when">Sun 06 Sep &#183; 14:30 GMT+3 &middot; Belgium First Div</span>
         </div>
         <div class="bg-lines">
-          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">San Diego FC win</span><span class="bl-s">3.20 leovegas_se</span></div>
-          <div class="bl off note"><span class="bl-v">No goals model for MLS</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
-        </div>
-      </li>
-      <li class="bg">
-        <div class="bg-head">
-          <span class="bg-tm">Burnley v Middlesbrough</span>
-          <span class="bg-when">Wed 02 Sep &#183; 22:00 GMT+3 &middot; Championship</span>
-        </div>
-        <div class="bg-lines">
-          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Middlesbrough win</span><span class="bl-s">2.55 leovegas_se</span></div>
-          <div class="bl off"><span class="bl-k">Goals</span><span class="bl-v">Over 2.5</span><span class="bl-s">model only &middot; 63%</span></div>
-          <div class="bl off"><span class="bl-k">Both score</span><span class="bl-v">Yes</span><span class="bl-s">model only &middot; 62%</span></div>
+          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Cercle Brugge KSV win</span><span class="bl-s">3.00 grosvenor</span></div>
+          <div class="bl off note"><span class="bl-v">No goals model for Belgium First Div</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
         </div>
       </li>
       <li class="bg">
@@ -512,6 +490,17 @@
           <div class="bl off note"><span class="bl-v">No goals model for Primera Divisi&#243;n</span><span class="bl-s">no current-season results to fit, so there is no over/under or both-score call for this match</span></div>
         </div>
       </li>
+      <li class="bg">
+        <div class="bg-head">
+          <span class="bg-tm">Everton v Manchester United</span>
+          <span class="bg-when">Sun 06 Sep &#183; 16:00 GMT+3 &middot; EPL</span>
+        </div>
+        <div class="bg-lines">
+          <div class="bl on"><span class="bl-k">Result</span><span class="bl-v">Everton win</span><span class="bl-s">3.45 unibet_se</span></div>
+          <div class="bl off"><span class="bl-k">Goals</span><span class="bl-v">Over 2.5</span><span class="bl-s">model only &middot; 59%</span></div>
+          <div class="bl off"><span class="bl-k">Both score</span><span class="bl-v">Yes</span><span class="bl-s">model only &middot; 62%</span></div>
+        </div>
+      </li>
     </ol>
 
     <p style="margin-top:18px;font-size:13.5px">The price beside each
@@ -540,21 +529,6 @@
       <li class="sl">
         <div class="sl-n">1</div>
         <div class="sl-body">
-          <div class="sl-fix">Kilmarnock v St Mirren</div>
-          <div class="sl-when">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Premiership - Scotland</div>
-          <div class="sl-bet">Back <b>St Mirren</b> <span class="sl-mk">1X2</span></div>
-          <div class="sl-terms">
-            <span><i>at</i> <b class="sl-odds">2.70</b></span>
-            <span><i>with</i> <b>paddypower</b></span>
-            <span><i>stake</i> <b>1.05%</b> of bankroll</span>
-            <span><i>edge</i> <b class="grad-text">+7.1%</b></span>
-          </div>
-          <div class="sl-alt">same price at skybet 2.63; betway 2.62</div>
-        </div>
-      </li>
-      <li class="sl">
-        <div class="sl-n">2</div>
-        <div class="sl-body">
           <div class="sl-fix">Gimnasia La Plata v CA Tigre BA</div>
           <div class="sl-when">Sat 05 Sep &#183; 20:30 GMT+3 &#183; Primera Divisi&#243;n - Argentina</div>
           <div class="sl-bet">Back <b>CA Tigre BA</b> <span class="sl-mk">1X2</span></div>
@@ -567,7 +541,7 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">3</div>
+        <div class="sl-n">2</div>
         <div class="sl-body">
           <div class="sl-fix">Real Salt Lake v Los Angeles FC</div>
           <div class="sl-when">Sun 06 Sep &#183; 04:30 GMT+3 &#183; MLS</div>
@@ -579,6 +553,21 @@
             <span><i>edge</i> <b class="grad-text">+5.9%</b></span>
           </div>
           <div class="sl-alt">same price at unibet_se 2.80; casumo 2.80; unibet_nl 2.80</div>
+        </div>
+      </li>
+      <li class="sl">
+        <div class="sl-n">3</div>
+        <div class="sl-body">
+          <div class="sl-fix">Orlando City SC v San Diego FC</div>
+          <div class="sl-when">Sun 06 Sep &#183; 02:30 GMT+3 &#183; MLS</div>
+          <div class="sl-bet">Back <b>San Diego FC</b> <span class="sl-mk">1X2</span></div>
+          <div class="sl-terms">
+            <span><i>at</i> <b class="sl-odds">3.25</b></span>
+            <span><i>with</i> <b>leovegas_se</b></span>
+            <span><i>stake</i> <b>0.59%</b> of bankroll</span>
+            <span><i>edge</i> <b class="grad-text">+5.3%</b></span>
+          </div>
+          <div class="sl-alt">same price at unibet_nl 3.15; casumo 3.15; unibet_se 3.15</div>
         </div>
       </li>
       <li class="sl">
@@ -599,35 +588,6 @@
       <li class="sl">
         <div class="sl-n">5</div>
         <div class="sl-body">
-          <div class="sl-fix">Queens Park Rangers v Cardiff City</div>
-          <div class="sl-when">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</div>
-          <div class="sl-bet">Back <b>Cardiff City</b> <span class="sl-mk">1X2</span></div>
-          <div class="sl-terms">
-            <span><i>at</i> <b class="sl-odds">3.90</b></span>
-            <span><i>with</i> <b>leovegas_se</b></span>
-            <span><i>stake</i> <b>0.43%</b> of bankroll</span>
-            <span><i>edge</i> <b class="grad-text">+5.0%</b></span>
-          </div>
-        </div>
-      </li>
-      <li class="sl">
-        <div class="sl-n">6</div>
-        <div class="sl-body">
-          <div class="sl-fix">Luton v Stockport County FC</div>
-          <div class="sl-when">Wed 02 Sep &#183; 21:45 GMT+3 &#183; League 1</div>
-          <div class="sl-bet">Back <b>Stockport County FC</b> <span class="sl-mk">1X2</span></div>
-          <div class="sl-terms">
-            <span><i>at</i> <b class="sl-odds">3.25</b></span>
-            <span><i>with</i> <b>unibet_se</b></span>
-            <span><i>stake</i> <b>0.53%</b> of bankroll</span>
-            <span><i>edge</i> <b class="grad-text">+4.8%</b></span>
-          </div>
-          <div class="sl-alt">same price at unibet_nl 3.25; casumo 3.25</div>
-        </div>
-      </li>
-      <li class="sl">
-        <div class="sl-n">7</div>
-        <div class="sl-body">
           <div class="sl-fix">Juventus v AC Milan</div>
           <div class="sl-when">Sun 06 Sep &#183; 21:45 GMT+3 &#183; Serie A - Italy</div>
           <div class="sl-bet">Back <b>the draw</b> <span class="sl-mk">1X2</span></div>
@@ -641,7 +601,7 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">8</div>
+        <div class="sl-n">6</div>
         <div class="sl-body">
           <div class="sl-fix">Inter Milan v Napoli</div>
           <div class="sl-when">Sat 05 Sep &#183; 19:00 GMT+3 &#183; Serie A - Italy</div>
@@ -655,21 +615,7 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">9</div>
-        <div class="sl-body">
-          <div class="sl-fix">Millwall v Wrexham AFC</div>
-          <div class="sl-when">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</div>
-          <div class="sl-bet">Back <b>Wrexham AFC</b> <span class="sl-mk">1X2</span></div>
-          <div class="sl-terms">
-            <span><i>at</i> <b class="sl-odds">3.40</b></span>
-            <span><i>with</i> <b>betway</b></span>
-            <span><i>stake</i> <b>0.41%</b> of bankroll</span>
-            <span><i>edge</i> <b class="grad-text">+3.9%</b></span>
-          </div>
-        </div>
-      </li>
-      <li class="sl">
-        <div class="sl-n">10</div>
+        <div class="sl-n">7</div>
         <div class="sl-body">
           <div class="sl-fix">GAIS v BK Hacken</div>
           <div class="sl-when">Sat 05 Sep &#183; 16:00 GMT+3 &#183; Allsvenskan - Sweden</div>
@@ -683,7 +629,21 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">11</div>
+        <div class="sl-n">8</div>
+        <div class="sl-body">
+          <div class="sl-fix">Charleroi v Union Saint-Gilloise</div>
+          <div class="sl-when">Sat 05 Sep &#183; 17:00 GMT+3 &#183; Belgium First Div</div>
+          <div class="sl-bet">Back <b>Union Saint-Gilloise</b> <span class="sl-mk">1X2</span></div>
+          <div class="sl-terms">
+            <span><i>at</i> <b class="sl-odds">2.00</b></span>
+            <span><i>with</i> <b>betanysports</b></span>
+            <span><i>stake</i> <b>0.93%</b> of bankroll</span>
+            <span><i>edge</i> <b class="grad-text">+3.7%</b></span>
+          </div>
+        </div>
+      </li>
+      <li class="sl">
+        <div class="sl-n">9</div>
         <div class="sl-body">
           <div class="sl-fix">Fiorentina v Torino</div>
           <div class="sl-when">Sat 05 Sep &#183; 16:00 GMT+3 &#183; Serie A - Italy</div>
@@ -697,7 +657,7 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">12</div>
+        <div class="sl-n">10</div>
         <div class="sl-body">
           <div class="sl-fix">Platense v Deportivo Riestra</div>
           <div class="sl-when">Sat 05 Sep &#183; 01:00 GMT+3 &#183; Primera Divisi&#243;n - Argentina</div>
@@ -711,7 +671,22 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">13</div>
+        <div class="sl-n">11</div>
+        <div class="sl-body">
+          <div class="sl-fix">Nottingham Forest v Tottenham Hotspur</div>
+          <div class="sl-when">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</div>
+          <div class="sl-bet">Back <b>Nottingham Forest</b> <span class="sl-mk">1X2</span></div>
+          <div class="sl-terms">
+            <span><i>at</i> <b class="sl-odds">2.63</b></span>
+            <span><i>with</i> <b>unibet_nl</b></span>
+            <span><i>stake</i> <b>0.54%</b> of bankroll</span>
+            <span><i>edge</i> <b class="grad-text">+3.5%</b></span>
+          </div>
+          <div class="sl-alt">same price at unibet_se 2.63</div>
+        </div>
+      </li>
+      <li class="sl">
+        <div class="sl-n">12</div>
         <div class="sl-body">
           <div class="sl-fix">FC Basel v FC Lugano</div>
           <div class="sl-when">Sun 06 Sep &#183; 17:30 GMT+3 &#183; Swiss Superleague</div>
@@ -723,6 +698,20 @@
             <span><i>edge</i> <b class="grad-text">+2.9%</b></span>
           </div>
           <div class="sl-alt">same price at grosvenor 2.55; unibet_se 2.55; casumo 2.55</div>
+        </div>
+      </li>
+      <li class="sl">
+        <div class="sl-n">13</div>
+        <div class="sl-body">
+          <div class="sl-fix">Cercle Brugge KSV v Gent</div>
+          <div class="sl-when">Sun 06 Sep &#183; 14:30 GMT+3 &#183; Belgium First Div</div>
+          <div class="sl-bet">Back <b>Cercle Brugge KSV</b> <span class="sl-mk">1X2</span></div>
+          <div class="sl-terms">
+            <span><i>at</i> <b class="sl-odds">3.00</b></span>
+            <span><i>with</i> <b>grosvenor</b></span>
+            <span><i>stake</i> <b>0.36%</b> of bankroll</span>
+            <span><i>edge</i> <b class="grad-text">+2.9%</b></span>
+          </div>
         </div>
       </li>
       <li class="sl">
@@ -742,20 +731,6 @@
       <li class="sl">
         <div class="sl-n">15</div>
         <div class="sl-body">
-          <div class="sl-fix">Burnley v Middlesbrough</div>
-          <div class="sl-when">Wed 02 Sep &#183; 22:00 GMT+3 &#183; Championship</div>
-          <div class="sl-bet">Back <b>Middlesbrough</b> <span class="sl-mk">1X2</span></div>
-          <div class="sl-terms">
-            <span><i>at</i> <b class="sl-odds">2.55</b></span>
-            <span><i>with</i> <b>leovegas_se</b></span>
-            <span><i>stake</i> <b>0.41%</b> of bankroll</span>
-            <span><i>edge</i> <b class="grad-text">+2.5%</b></span>
-          </div>
-        </div>
-      </li>
-      <li class="sl">
-        <div class="sl-n">16</div>
-        <div class="sl-body">
           <div class="sl-fix">Austin FC v San Jose Earthquakes</div>
           <div class="sl-when">Sun 06 Sep &#183; 03:30 GMT+3 &#183; MLS</div>
           <div class="sl-bet">Back <b>the draw</b> <span class="sl-mk">1X2</span></div>
@@ -768,7 +743,7 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">17</div>
+        <div class="sl-n">16</div>
         <div class="sl-body">
           <div class="sl-fix">LA Galaxy v New England Revolution</div>
           <div class="sl-when">Sun 06 Sep &#183; 04:30 GMT+3 &#183; MLS</div>
@@ -782,7 +757,7 @@
         </div>
       </li>
       <li class="sl">
-        <div class="sl-n">18</div>
+        <div class="sl-n">17</div>
         <div class="sl-body">
           <div class="sl-fix">Central C&#243;rdoba v Independiente</div>
           <div class="sl-when">Sun 06 Sep &#183; 23:00 GMT+3 &#183; Primera Divisi&#243;n - Argentina</div>
@@ -793,6 +768,21 @@
             <span><i>stake</i> <b>0.23%</b> of bankroll</span>
             <span><i>edge</i> <b class="grad-text">+2.1%</b></span>
           </div>
+        </div>
+      </li>
+      <li class="sl">
+        <div class="sl-n">18</div>
+        <div class="sl-body">
+          <div class="sl-fix">Everton v Manchester United<span class="sl-tag">model agrees</span></div>
+          <div class="sl-when">Sun 06 Sep &#183; 16:00 GMT+3 &#183; EPL</div>
+          <div class="sl-bet">Back <b>Everton</b> <span class="sl-mk">1X2</span></div>
+          <div class="sl-terms">
+            <span><i>at</i> <b class="sl-odds">3.45</b></span>
+            <span><i>with</i> <b>unibet_se</b></span>
+            <span><i>stake</i> <b>0.21%</b> of bankroll</span>
+            <span><i>edge</i> <b class="grad-text">+2.0%</b></span>
+          </div>
+          <div class="sl-alt">same price at unibet_nl 3.45</div>
         </div>
       </li>
     </ol>
@@ -815,8 +805,8 @@
       single score.</p>
     <div class="board">
       <div class="board-head">
-        <b>39 selections</b>
-        <span>0 both &middot; 18 price &middot; 21 model &middot; strongest first</span>
+        <b>41 selections</b>
+        <span>1 both &middot; 16 price &middot; 24 model &middot; strongest first</span>
       </div>
       <div class="scroll">
         <table>
@@ -826,34 +816,14 @@
           </tr></thead>
           <tbody>
       <tr>
-        <td class="fix"><span class="tm">Queens Park Rangers v Cardiff City</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Cardiff City<span class="mk">1X2</span></td>
-        <td class="bk">leovegas_se<span class="mk">best price</span></td>
-        <td class="num odds">3.90</td>
-        <td class="num"><span class="mdl">33%</span><span class="mev">+28.5%</span></td>
-        <td class="num"><span class="sig price" title="out of line with the sharp market; the model does not back it">PRICE</span>
-          <span class="pev">price +5.0%</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Millwall v Wrexham AFC</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Wrexham AFC<span class="mk">1X2</span></td>
-        <td class="bk">betway<span class="mk">best price</span></td>
-        <td class="num odds">3.40</td>
-        <td class="num"><span class="mdl">24%</span><span class="mev">-18.0%</span></td>
-        <td class="num"><span class="sig price" title="out of line with the sharp market; the model does not back it">PRICE</span>
-          <span class="pev">price +3.9%</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Burnley v Middlesbrough</span>
-          <span class="meta">Wed 02 Sep &#183; 22:00 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Middlesbrough<span class="mk">1X2</span></td>
-        <td class="bk">leovegas_se<span class="mk">best price</span></td>
-        <td class="num odds">2.55</td>
-        <td class="num"><span class="mdl">55%</span><span class="mev">+41.3%</span></td>
-        <td class="num"><span class="sig price" title="out of line with the sharp market; the model does not back it">PRICE</span>
-          <span class="pev">price +2.5%</span></td>
+        <td class="fix"><span class="tm">Everton v Manchester United</span>
+          <span class="meta">Sun 06 Sep &#183; 16:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Everton<span class="mk">1X2</span></td>
+        <td class="bk">unibet_se<span class="mk">best price</span></td>
+        <td class="num odds">3.45</td>
+        <td class="num"><span class="mdl">35%</span><span class="mev">+19.7%</span></td>
+        <td class="num"><span class="sig both" title="the model backs it and the price is out of line with the sharp market">BOTH</span>
+          <span class="pev">price +2.0%</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Fiorentina v Torino</span>
@@ -864,6 +834,16 @@
         <td class="num"><span class="mdl">24%</span><span class="mev">-17.5%</span></td>
         <td class="num"><span class="sig price" title="out of line with the sharp market; the model does not back it">PRICE</span>
           <span class="pev">price +3.7%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Nottingham Forest v Tottenham Hotspur</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Nottingham Forest<span class="mk">1X2</span></td>
+        <td class="bk">unibet_nl<span class="mk">best price</span></td>
+        <td class="num odds">2.63</td>
+        <td class="num"><span class="mdl">54%</span><span class="mev">+42.9%</span></td>
+        <td class="num"><span class="sig price" title="out of line with the sharp market; the model does not back it">PRICE</span>
+          <span class="pev">price +3.5%</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Inter Milan v Napoli</span>
@@ -886,36 +866,6 @@
           <span class="pev">price +4.6%</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">West Bromwich Albion v Charlton Athletic</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Under<span class="mk">O/U 2.5</span></td>
-        <td class="bk">betonlineag<span class="mk">best price</span></td>
-        <td class="num odds">1.76</td>
-        <td class="num"><span class="mdl">64%</span><span class="mev">+12.1%</span></td>
-        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
-          <span class="pev">price &mdash;</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Millwall v Wrexham AFC</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Millwall<span class="mk">1X2</span></td>
-        <td class="bk">nordicbet<span class="mk">best price</span></td>
-        <td class="num odds">2.33</td>
-        <td class="num"><span class="mdl">48%</span><span class="mev">+12.2%</span></td>
-        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
-          <span class="pev">price -3.6%</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Burnley v Middlesbrough</span>
-          <span class="meta">Wed 02 Sep &#183; 22:00 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Over<span class="mk">O/U 2.5</span></td>
-        <td class="bk">coolbet<span class="mk">best price</span></td>
-        <td class="num odds">1.78</td>
-        <td class="num"><span class="mdl">63%</span><span class="mev">+11.7%</span></td>
-        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
-          <span class="pev">price -3.0%</span></td>
-      </tr>
-      <tr>
         <td class="fix"><span class="tm">Genoa v Como</span>
           <span class="meta">Fri 04 Sep &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="pick">Genoa<span class="mk">1X2</span></td>
@@ -924,16 +874,6 @@
         <td class="num"><span class="mdl">19%</span><span class="mev">+10.6%</span></td>
         <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
           <span class="pev">price -4.5%</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Ipswich Town v Liverpool</span>
-          <span class="meta">Fri 04 Sep &#183; 22:00 GMT+3 &#183; EPL</span></td>
-        <td class="pick">Over<span class="mk">O/U 2.5</span></td>
-        <td class="bk">casumo<span class="mk">best price</span></td>
-        <td class="num odds">1.60</td>
-        <td class="num"><span class="mdl">74%</span><span class="mev">+19.1%</span></td>
-        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
-          <span class="pev">price -2.3%</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Preston North End v Blackburn Rovers</span>
@@ -976,6 +916,26 @@
           <span class="pev">price &mdash;</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Bayer Leverkusen v Union Berlin</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Union Berlin<span class="mk">1X2</span></td>
+        <td class="bk">betsson<span class="mk">best price</span></td>
+        <td class="num odds">6.80</td>
+        <td class="num"><span class="mdl">18%</span><span class="mev">+19.3%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -0.5%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Werder Bremen v RB Leipzig</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Werder Bremen<span class="mk">1X2</span></td>
+        <td class="bk">betsson<span class="mk">best price</span></td>
+        <td class="num odds">4.25</td>
+        <td class="num"><span class="mdl">25%</span><span class="mev">+5.7%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -1.6%</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Millwall v Bolton Wanderers</span>
           <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; Championship</span></td>
         <td class="pick">Under<span class="mk">O/U 2.5</span></td>
@@ -1014,6 +974,26 @@
         <td class="num"><span class="mdl">31%</span><span class="mev">+6.5%</span></td>
         <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
           <span class="pev">price -4.6%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Brighton and Hove Albion v Leeds United</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Leeds United<span class="mk">1X2</span></td>
+        <td class="bk">unibet_nl<span class="mk">best price</span></td>
+        <td class="num odds">4.25</td>
+        <td class="num"><span class="mdl">25%</span><span class="mev">+5.4%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -0.3%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Fulham v Crystal Palace</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Fulham<span class="mk">1X2</span></td>
+        <td class="bk">unibet_uk<span class="mk">best price</span></td>
+        <td class="num odds">2.35</td>
+        <td class="num"><span class="mdl">48%</span><span class="mev">+13.8%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -2.5%</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">AS Roma v Atalanta BC</span>
@@ -1076,6 +1056,36 @@
           <span class="pev">price -1.1%</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Hamburger SV v FSV Mainz 05</span>
+          <span class="meta">Sun 06 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Hamburger SV<span class="mk">1X2</span></td>
+        <td class="bk">betsson<span class="mk">best price</span></td>
+        <td class="num odds">2.95</td>
+        <td class="num"><span class="mdl">40%</span><span class="mev">+17.6%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -2.2%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Santa Clara v Rio Ave FC</span>
+          <span class="meta">Sun 06 Sep &#183; 17:30 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="pick">Rio Ave FC<span class="mk">1X2</span></td>
+        <td class="bk">tipico_de<span class="mk">best price</span></td>
+        <td class="num odds">4.70</td>
+        <td class="num"><span class="mdl">23%</span><span class="mev">+7.4%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -9.0%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Eintracht Frankfurt v Augsburg</span>
+          <span class="meta">Sun 06 Sep &#183; 18:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Augsburg<span class="mk">1X2</span></td>
+        <td class="bk">tipico_de<span class="mk">best price</span></td>
+        <td class="num odds">3.70</td>
+        <td class="num"><span class="mdl">28%</span><span class="mev">+3.4%</span></td>
+        <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
+          <span class="pev">price -2.4%</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Juventus v AC Milan</span>
           <span class="meta">Sun 06 Sep &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="pick">AC Milan<span class="mk">1X2</span></td>
@@ -1094,26 +1104,6 @@
         <td class="num"><span class="mdl">59%</span><span class="mev">+4.1%</span></td>
         <td class="num"><span class="sig model" title="the model disagrees with the entire market, itself included">MODEL</span>
           <span class="pev">price -3.8%</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Kilmarnock v St Mirren</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Premiership - Scotland</span></td>
-        <td class="pick">St Mirren<span class="mk">1X2</span></td>
-        <td class="bk">paddypower<span class="mk">best price</span></td>
-        <td class="num odds">2.70</td>
-        <td class="num"><span class="mdl">&mdash;</span><span class="mev"><span class="na">not modelled</span></span></td>
-        <td class="num"><span class="sig not-modelled" title="price signal only - this league has no current-season data to fit">PRICE</span>
-          <span class="pev">price +7.1%</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Luton v Stockport County FC</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; League 1</span></td>
-        <td class="pick">Stockport County FC<span class="mk">1X2</span></td>
-        <td class="bk">unibet_se<span class="mk">best price</span></td>
-        <td class="num odds">3.25</td>
-        <td class="num"><span class="mdl">&mdash;</span><span class="mev"><span class="na">not modelled</span></span></td>
-        <td class="num"><span class="sig not-modelled" title="price signal only - this league has no current-season data to fit">PRICE</span>
-          <span class="pev">price +4.8%</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Viborg FF v Lyngby</span>
@@ -1146,6 +1136,16 @@
           <span class="pev">price +3.8%</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Charleroi v Union Saint-Gilloise</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; Belgium First Div</span></td>
+        <td class="pick">Union Saint-Gilloise<span class="mk">1X2</span></td>
+        <td class="bk">betanysports<span class="mk">best price</span></td>
+        <td class="num odds">2.00</td>
+        <td class="num"><span class="mdl">&mdash;</span><span class="mev"><span class="na">not modelled</span></span></td>
+        <td class="num"><span class="sig not-modelled" title="price signal only - this league has no current-season data to fit">PRICE</span>
+          <span class="pev">price +3.7%</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Gimnasia La Plata v CA Tigre BA</span>
           <span class="meta">Sat 05 Sep &#183; 20:30 GMT+3 &#183; Primera Divisi&#243;n - Argentina</span></td>
         <td class="pick">CA Tigre BA<span class="mk">1X2</span></td>
@@ -1160,7 +1160,7 @@
           <span class="meta">Sun 06 Sep &#183; 02:30 GMT+3 &#183; MLS</span></td>
         <td class="pick">San Diego FC<span class="mk">1X2</span></td>
         <td class="bk">leovegas_se<span class="mk">best price</span></td>
-        <td class="num odds">3.20</td>
+        <td class="num odds">3.25</td>
         <td class="num"><span class="mdl">&mdash;</span><span class="mev"><span class="na">not modelled</span></span></td>
         <td class="num"><span class="sig not-modelled" title="price signal only - this league has no current-season data to fit">PRICE</span>
           <span class="pev">price +2.6%</span></td>
@@ -1194,6 +1194,16 @@
         <td class="num"><span class="mdl">&mdash;</span><span class="mev"><span class="na">not modelled</span></span></td>
         <td class="num"><span class="sig not-modelled" title="price signal only - this league has no current-season data to fit">PRICE</span>
           <span class="pev">price +2.4%</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Cercle Brugge KSV v Gent</span>
+          <span class="meta">Sun 06 Sep &#183; 14:30 GMT+3 &#183; Belgium First Div</span></td>
+        <td class="pick">Cercle Brugge KSV<span class="mk">1X2</span></td>
+        <td class="bk">grosvenor<span class="mk">best price</span></td>
+        <td class="num odds">3.00</td>
+        <td class="num"><span class="mdl">&mdash;</span><span class="mev"><span class="na">not modelled</span></span></td>
+        <td class="num"><span class="sig not-modelled" title="price signal only - this league has no current-season data to fit">PRICE</span>
+          <span class="pev">price +2.9%</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">FC Basel v FC Lugano</span>
@@ -1249,8 +1259,8 @@
 
     <div class="board">
       <div class="board-head">
-        <b>25 fixtures modelled</b>
-        <span>18 with a model edge &middot; 7 without &middot; &#9733; the price signal fires too</span>
+        <b>43 fixtures modelled</b>
+        <span>22 with a model edge &middot; 21 without &middot; &#9733; the price signal fires too</span>
       </div>
       <div class="scroll">
         <table>
@@ -1260,36 +1270,12 @@
           </tr></thead>
           <tbody>
       <tr>
-        <td class="fix"><span class="tm">Queens Park Rangers v Cardiff City</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.60 &ndash; 1.44 xG</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:40.0%" title="H 40%"></span><span class="pseg s1" style="width:27.1%" title="D 27%"></span><span class="pseg s2" style="width:32.9%" title="A 33%"></span></span><span class="pnum">H 40% &#183; D 27% &#183; A 33%</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:58.7%" title="O 59%"></span><span class="pseg s1" style="width:41.3%" title="U 41%"></span></span><span class="pnum">O 59% &#183; U 41%</span></td>
-        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">West Bromwich Albion v Charlton Athletic</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.18 &ndash; 0.97 xG</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:38.9%" title="H 39%"></span><span class="pseg s1" style="width:33.0%" title="D 33%"></span><span class="pseg s2" style="width:28.0%" title="A 28%"></span></span><span class="pnum">H 39% &#183; D 33% &#183; A 28%</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:36.3%" title="O 36%"></span><span class="pseg s1" style="width:63.7%" title="U 64%"></span></span><span class="pnum">O 36% &#183; U 64%</span></td>
-        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="no sharp book quoted this selection, so it is model-only">O/U 2.5 &#183; Under <b>1.76</b> <i>betonlineag</i><em class="agree-note">no sharp price to compare</em></span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Millwall v Wrexham AFC</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.64 &ndash; 1.11 xG</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:48.2%" title="H 48%"></span><span class="pseg s1" style="width:27.7%" title="D 28%"></span><span class="pseg s2" style="width:24.1%" title="A 24%"></span></span><span class="pnum">H 48% &#183; D 28% &#183; A 24%</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:52.0%" title="O 52%"></span><span class="pseg s1" style="width:48.0%" title="U 48%"></span></span><span class="pnum">O 52% &#183; U 48%</span></td>
-        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Millwall <b>2.33</b> <i>nordicbet</i><em class="agree-note">sharp market disagrees (-3.6%)</em></span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Burnley v Middlesbrough</span>
-          <span class="meta">Wed 02 Sep &#183; 22:00 GMT+3 &#183; Championship</span></td>
-        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.20 &ndash; 2.04 xG</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:20.7%" title="H 21%"></span><span class="pseg s1" style="width:23.9%" title="D 24%"></span><span class="pseg s2" style="width:55.4%" title="A 55%"></span></span><span class="pnum">H 21% &#183; D 24% &#183; A 55%</span></td>
-        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:62.8%" title="O 63%"></span><span class="pseg s1" style="width:37.2%" title="U 37%"></span></span><span class="pnum">O 63% &#183; U 37%</span></td>
-        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">O/U 2.5 &#183; Over <b>1.78</b> <i>coolbet</i><em class="agree-note">sharp market disagrees (-3.0%)</em></span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+        <td class="fix"><span class="tm">VfB Stuttgart v 1. FC K&#246;ln</span>
+          <span class="meta">Fri 04 Sep &#183; 21:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>2&ndash;1</b><span class="xg">2.61 &ndash; 1.31 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:65.0%" title="H 65%"></span><span class="pseg s1" style="width:17.9%" title="D 18%"></span><span class="pseg s2" style="width:17.2%" title="A 17%"></span></span><span class="pnum">H 65% &#183; D 18% &#183; A 17%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:75.0%" title="O 75%"></span><span class="pseg s1" style="width:25.0%" title="U 25%"></span></span><span class="pnum">O 75% &#183; U 25%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus">no qualifying edge</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Genoa v Como</span>
@@ -1305,7 +1291,15 @@
         <td class="num sc"><b>1&ndash;1</b><span class="xg">1.95 &ndash; 1.94 xG</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:38.9%" title="H 39%"></span><span class="pseg s1" style="width:22.6%" title="D 23%"></span><span class="pseg s2" style="width:38.5%" title="A 38%"></span></span><span class="pnum">H 39% &#183; D 23% &#183; A 38%</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:74.5%" title="O 74%"></span><span class="pseg s1" style="width:25.5%" title="U 26%"></span></span><span class="pnum">O 74% &#183; U 26%</span></td>
-        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">O/U 2.5 &#183; Over <b>1.60</b> <i>casumo</i><em class="agree-note">sharp market disagrees (-2.3%)</em></span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">FC Porto v Moreirense FC</span>
+          <span class="meta">Fri 04 Sep &#183; 22:15 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="num sc"><b>2&ndash;0</b><span class="xg">2.15 &ndash; 0.56 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:75.2%" title="H 75%"></span><span class="pseg s1" style="width:15.5%" title="D 15%"></span><span class="pseg s2" style="width:9.3%" title="A 9%"></span></span><span class="pnum">H 75% &#183; D 15% &#183; A 9%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:51.0%" title="O 51%"></span><span class="pseg s1" style="width:49.0%" title="U 49%"></span></span><span class="pnum">O 51% &#183; U 49%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Preston North End v Blackburn Rovers</span>
@@ -1332,12 +1326,60 @@
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="no sharp book quoted this selection, so it is model-only">O/U 2.5 &#183; Over <b>1.79</b> <i>gtbets</i><em class="agree-note">no sharp price to compare</em></span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Newcastle United v Bournemouth</span>
+          <span class="meta">Sat 05 Sep &#183; 14:30 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.62 &ndash; 1.40 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:41.7%" title="H 42%"></span><span class="pseg s1" style="width:26.4%" title="D 26%"></span><span class="pseg s2" style="width:31.9%" title="A 32%"></span></span><span class="pnum">H 42% &#183; D 26% &#183; A 32%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:58.1%" title="O 58%"></span><span class="pseg s1" style="width:41.9%" title="U 42%"></span></span><span class="pnum">O 58% &#183; U 42%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus">no qualifying edge</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Fiorentina v Torino</span>
           <span class="meta">Sat 05 Sep &#183; 16:00 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="num sc"><b>1&ndash;1</b><span class="xg">1.41 &ndash; 1.31 xG</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:40.4%" title="H 40%"></span><span class="pseg s1" style="width:23.6%" title="D 24%"></span><span class="pseg s2" style="width:36.1%" title="A 36%"></span></span><span class="pnum">H 40% &#183; D 24% &#183; A 36%</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:51.1%" title="O 51%"></span><span class="pseg s1" style="width:48.9%" title="U 49%"></span></span><span class="pnum">O 51% &#183; U 49%</span></td>
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="no sharp book quoted this selection, so it is model-only">O/U 2.5 &#183; Over <b>2.24</b> <i>betanysports</i><em class="agree-note">no sharp price to compare</em></span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Bayer Leverkusen v Union Berlin</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>2&ndash;1</b><span class="xg">2.20 &ndash; 1.10 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:62.0%" title="H 62%"></span><span class="pseg s1" style="width:20.4%" title="D 20%"></span><span class="pseg s2" style="width:17.5%" title="A 18%"></span></span><span class="pnum">H 62% &#183; D 20% &#183; A 18%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:64.0%" title="O 64%"></span><span class="pseg s1" style="width:36.0%" title="U 36%"></span></span><span class="pnum">O 64% &#183; U 36%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Union Berlin <b>6.80</b> <i>betsson</i><em class="agree-note">sharp market disagrees (-0.5%)</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">TSG Hoffenheim v Borussia Dortmund</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.45 &ndash; 1.75 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:31.7%" title="H 32%"></span><span class="pseg s1" style="width:24.0%" title="D 24%"></span><span class="pseg s2" style="width:44.3%" title="A 44%"></span></span><span class="pnum">H 32% &#183; D 24% &#183; A 44%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:62.0%" title="O 62%"></span><span class="pseg s1" style="width:38.0%" title="U 38%"></span></span><span class="pnum">O 62% &#183; U 38%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus">no qualifying edge</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Borussia Monchengladbach v Elversberg</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.58 &ndash; 1.34 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:42.7%" title="H 43%"></span><span class="pseg s1" style="width:25.4%" title="D 25%"></span><span class="pseg s2" style="width:32.0%" title="A 32%"></span></span><span class="pnum">H 43% &#183; D 25% &#183; A 32%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:55.9%" title="O 56%"></span><span class="pseg s1" style="width:44.1%" title="U 44%"></span></span><span class="pnum">O 56% &#183; U 44%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Werder Bremen v RB Leipzig</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.21 &ndash; 1.82 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:24.9%" title="H 25%"></span><span class="pseg s1" style="width:23.8%" title="D 24%"></span><span class="pseg s2" style="width:51.3%" title="A 51%"></span></span><span class="pnum">H 25% &#183; D 24% &#183; A 51%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:58.3%" title="O 58%"></span><span class="pseg s1" style="width:41.7%" title="U 42%"></span></span><span class="pnum">O 58% &#183; U 42%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Werder Bremen <b>4.25</b> <i>betsson</i><em class="agree-note">sharp market disagrees (-1.6%)</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">SC Paderborn v SC Freiburg</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.61 &ndash; 1.24 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:45.4%" title="H 45%"></span><span class="pseg s1" style="width:25.5%" title="D 25%"></span><span class="pseg s2" style="width:29.1%" title="A 29%"></span></span><span class="pnum">H 45% &#183; D 25% &#183; A 29%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:54.2%" title="O 54%"></span><span class="pseg s1" style="width:45.8%" title="U 46%"></span></span><span class="pnum">O 54% &#183; U 46%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Millwall v Bolton Wanderers</span>
@@ -1396,12 +1438,68 @@
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Draw <b>3.45</b> <i>leovegas_se</i><em class="agree-note">sharp market disagrees (-4.6%)</em></span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Brentford v Sunderland</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.60 &ndash; 1.02 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:49.6%" title="H 50%"></span><span class="pseg s1" style="width:27.5%" title="D 27%"></span><span class="pseg s2" style="width:22.9%" title="A 23%"></span></span><span class="pnum">H 50% &#183; D 27% &#183; A 23%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:48.6%" title="O 49%"></span><span class="pseg s1" style="width:51.4%" title="U 51%"></span></span><span class="pnum">O 49% &#183; U 51%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Brighton and Hove Albion v Leeds United</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.65 &ndash; 1.13 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:48.4%" title="H 48%"></span><span class="pseg s1" style="width:26.8%" title="D 27%"></span><span class="pseg s2" style="width:24.8%" title="A 25%"></span></span><span class="pnum">H 48% &#183; D 27% &#183; A 25%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:52.6%" title="O 53%"></span><span class="pseg s1" style="width:47.4%" title="U 47%"></span></span><span class="pnum">O 53% &#183; U 47%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Leeds United <b>4.25</b> <i>unibet_nl</i><em class="agree-note">sharp market disagrees (-0.3%)</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Manchester City v Coventry City</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>2&ndash;0</b><span class="xg">2.48 &ndash; 0.81 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:73.0%" title="H 73%"></span><span class="pseg s1" style="width:17.5%" title="D 18%"></span><span class="pseg s2" style="width:9.4%" title="A 9%"></span></span><span class="pnum">H 73% &#183; D 18% &#183; A 9%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:63.9%" title="O 64%"></span><span class="pseg s1" style="width:36.1%" title="U 36%"></span></span><span class="pnum">O 64% &#183; U 36%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Fulham v Crystal Palace</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.56 &ndash; 1.03 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:48.4%" title="H 48%"></span><span class="pseg s1" style="width:27.9%" title="D 28%"></span><span class="pseg s2" style="width:23.7%" title="A 24%"></span></span><span class="pnum">H 48% &#183; D 28% &#183; A 24%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:47.8%" title="O 48%"></span><span class="pseg s1" style="width:52.2%" title="U 52%"></span></span><span class="pnum">O 48% &#183; U 52%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Fulham <b>2.35</b> <i>unibet_uk</i><em class="agree-note">sharp market disagrees (-2.5%)</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Nottingham Forest v Tottenham Hotspur</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.77 &ndash; 1.00 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:54.3%" title="H 54%"></span><span class="pseg s1" style="width:25.7%" title="D 26%"></span><span class="pseg s2" style="width:20.0%" title="A 20%"></span></span><span class="pnum">H 54% &#183; D 26% &#183; A 20%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:52.3%" title="O 52%"></span><span class="pseg s1" style="width:47.7%" title="U 48%"></span></span><span class="pnum">O 52% &#183; U 48%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Inter Milan v Napoli</span>
           <span class="meta">Sat 05 Sep &#183; 19:00 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="num sc"><b>2&ndash;1</b><span class="xg">1.87 &ndash; 1.19 xG</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:54.2%" title="H 54%"></span><span class="pseg s1" style="width:20.8%" title="D 21%"></span><span class="pseg s2" style="width:25.0%" title="A 25%"></span></span><span class="pnum">H 54% &#183; D 21% &#183; A 25%</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:59.0%" title="O 59%"></span><span class="pseg s1" style="width:41.0%" title="U 41%"></span></span><span class="pnum">O 59% &#183; U 41%</span></td>
         <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">O/U 2.5 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Hull City v Aston Villa</span>
+          <span class="meta">Sat 05 Sep &#183; 19:30 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.73 &ndash; 0.96 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:54.3%" title="H 54%"></span><span class="pseg s1" style="width:26.0%" title="D 26%"></span><span class="pseg s2" style="width:19.7%" title="A 20%"></span></span><span class="pnum">H 54% &#183; D 26% &#183; A 20%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:50.6%" title="O 51%"></span><span class="pseg s1" style="width:49.4%" title="U 49%"></span></span><span class="pnum">O 51% &#183; U 49%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">FC Schalke 04 v Bayern Munich</span>
+          <span class="meta">Sat 05 Sep &#183; 19:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;3</b><span class="xg">1.24 &ndash; 3.24 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:10.7%" title="H 11%"></span><span class="pseg s1" style="width:13.2%" title="D 13%"></span><span class="pseg s2" style="width:76.1%" title="A 76%"></span></span><span class="pnum">H 11% &#183; D 13% &#183; A 76%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:82.5%" title="O 83%"></span><span class="pseg s1" style="width:17.5%" title="U 17%"></span></span><span class="pnum">O 83% &#183; U 17%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">AS Roma v Atalanta BC</span>
@@ -1420,12 +1518,28 @@
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Swansea City <b>2.55</b> <i>codere_it</i><em class="agree-note">sharp market disagrees (-5.9%)</em></span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Sporting Lisbon v Nacional</span>
+          <span class="meta">Sat 05 Sep &#183; 22:30 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="num sc"><b>2&ndash;0</b><span class="xg">2.60 &ndash; 0.84 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:75.9%" title="H 76%"></span><span class="pseg s1" style="width:13.4%" title="D 13%"></span><span class="pseg s2" style="width:10.6%" title="A 11%"></span></span><span class="pnum">H 76% &#183; D 13% &#183; A 11%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:66.8%" title="O 67%"></span><span class="pseg s1" style="width:33.2%" title="U 33%"></span></span><span class="pnum">O 67% &#183; U 33%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Birmingham City v Wolverhampton Wanderers</span>
           <span class="meta">Sun 06 Sep &#183; 14:00 GMT+3 &#183; Championship</span></td>
         <td class="num sc"><b>1&ndash;1</b><span class="xg">1.49 &ndash; 1.56 xG</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:34.8%" title="H 35%"></span><span class="pseg s1" style="width:27.1%" title="D 27%"></span><span class="pseg s2" style="width:38.1%" title="A 38%"></span></span><span class="pnum">H 35% &#183; D 27% &#183; A 38%</span></td>
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:58.8%" title="O 59%"></span><span class="pseg s1" style="width:41.2%" title="U 41%"></span></span><span class="pnum">O 59% &#183; U 41%</span></td>
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="no sharp book quoted this selection, so it is model-only">O/U 2.5 &#183; Over <b>2.07</b> <i>gtbets</i><em class="agree-note">no sharp price to compare</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Everton v Manchester United</span>
+          <span class="meta">Sun 06 Sep &#183; 16:00 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.47 &ndash; 1.57 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:34.7%" title="H 35%"></span><span class="pseg s1" style="width:26.4%" title="D 26%"></span><span class="pseg s2" style="width:39.0%" title="A 39%"></span></span><span class="pnum">H 35% &#183; D 26% &#183; A 39%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:58.7%" title="O 59%"></span><span class="pseg s1" style="width:41.3%" title="U 41%"></span></span><span class="pnum">O 59% &#183; U 41%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet agree" title="the price signal fires here too - this selection clears the same bar as the board above">1X2 &#183; Everton <b>3.45</b> <i>unibet_se</i> &#9733;<em class="agree-note">sharp market agrees (+2.0%)</em></span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Frosinone v Venezia</span>
@@ -1444,6 +1558,38 @@
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Monza <b>3.20</b> <i>tipico_de</i><em class="agree-note">sharp market disagrees (-2.8%)</em></span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">O/U 2.5 &#183; Over <b>2.45</b> <i>leovegas_se</i><em class="agree-note">sharp market disagrees (-1.1%)</em></span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Hamburger SV v FSV Mainz 05</span>
+          <span class="meta">Sun 06 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.33 &ndash; 1.17 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:39.8%" title="H 40%"></span><span class="pseg s1" style="width:27.9%" title="D 28%"></span><span class="pseg s2" style="width:32.3%" title="A 32%"></span></span><span class="pnum">H 40% &#183; D 28% &#183; A 32%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:45.7%" title="O 46%"></span><span class="pseg s1" style="width:54.3%" title="U 54%"></span></span><span class="pnum">O 46% &#183; U 54%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Hamburger SV <b>2.95</b> <i>betsson</i><em class="agree-note">sharp market disagrees (-2.2%)</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Santa Clara v Rio Ave FC</span>
+          <span class="meta">Sun 06 Sep &#183; 17:30 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="num sc"><b>1&ndash;0</b><span class="xg">1.43 &ndash; 0.81 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:53.1%" title="H 53%"></span><span class="pseg s1" style="width:24.1%" title="D 24%"></span><span class="pseg s2" style="width:22.8%" title="A 23%"></span></span><span class="pnum">H 53% &#183; D 24% &#183; A 23%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:38.9%" title="O 39%"></span><span class="pseg s1" style="width:61.1%" title="U 61%"></span></span><span class="pnum">O 39% &#183; U 61%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Rio Ave FC <b>4.70</b> <i>tipico_de</i><em class="agree-note">sharp market disagrees (-9.0%)</em></span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Arsenal v Chelsea</span>
+          <span class="meta">Sun 06 Sep &#183; 18:30 GMT+3 &#183; EPL</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">1.84 &ndash; 0.91 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:58.1%" title="H 58%"></span><span class="pseg s1" style="width:24.8%" title="D 25%"></span><span class="pseg s2" style="width:17.1%" title="A 17%"></span></span><span class="pnum">H 58% &#183; D 25% &#183; A 17%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:51.7%" title="O 52%"></span><span class="pseg s1" style="width:48.3%" title="U 48%"></span></span><span class="pnum">O 52% &#183; U 48%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus">no qualifying edge</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Eintracht Frankfurt v Augsburg</span>
+          <span class="meta">Sun 06 Sep &#183; 18:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="num sc"><b>1&ndash;1</b><span class="xg">2.01 &ndash; 1.47 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:49.7%" title="H 50%"></span><span class="pseg s1" style="width:22.3%" title="D 22%"></span><span class="pseg s2" style="width:27.9%" title="A 28%"></span></span><span class="pnum">H 50% &#183; D 22% &#183; A 28%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:67.6%" title="O 68%"></span><span class="pseg s1" style="width:32.4%" title="U 32%"></span></span><span class="pnum">O 68% &#183; U 32%</span></td>
+        <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">1X2 &#183; Augsburg <b>3.70</b> <i>tipico_de</i><em class="agree-note">sharp market disagrees (-2.4%)</em></span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Bologna v Sassuolo</span>
           <span class="meta">Sun 06 Sep &#183; 19:00 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="num sc"><b>1&ndash;0</b><span class="xg">1.33 &ndash; 1.21 xG</span></td>
@@ -1459,6 +1605,14 @@
         <td class="prob"><span class="pbar"><span class="pseg s0" style="width:40.9%" title="O 41%"></span><span class="pseg s1" style="width:59.1%" title="U 59%"></span></span><span class="pnum">O 41% &#183; U 59%</span></td>
         <td class="verd"><span class="verdict yes">MODEL EDGE</span><span class="vd bet" title="the sharp market leans the same way but by only +0.0%, under the 2% the price signal requires - not a confirmation">1X2 &#183; AC Milan <b>3.80</b> <i>unibet_nl</i><em class="agree-note">leans the same way, below the bar (+0.0%)</em></span><span class="vd bet" title="the model disagrees with the sharp market here - the model is the weaker forecaster of the two">O/U 2.5 &#183; Under <b>1.76</b> <i>unibet_se</i><em class="agree-note">sharp market disagrees (-3.8%)</em></span></td>
       </tr>
+      <tr>
+        <td class="fix"><span class="tm">Gil Vicente v Acad&#233;mico de Viseu</span>
+          <span class="meta">Sun 06 Sep &#183; 22:30 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="num sc"><b>1&ndash;0</b><span class="xg">1.53 &ndash; 1.00 xG</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:51.1%" title="H 51%"></span><span class="pseg s1" style="width:22.7%" title="D 23%"></span><span class="pseg s2" style="width:26.2%" title="A 26%"></span></span><span class="pnum">H 51% &#183; D 23% &#183; A 26%</span></td>
+        <td class="prob"><span class="pbar"><span class="pseg s0" style="width:46.5%" title="O 47%"></span><span class="pseg s1" style="width:53.5%" title="U 53%"></span></span><span class="pnum">O 47% &#183; U 53%</span></td>
+        <td class="verd"><span class="verdict no">NO EDGE</span><span class="vd sus" title="the model disagrees with the market by an implausible margin, so the model is the more likely thing to be wrong">1X2 &#183; not trusted</span></td>
+      </tr>
           </tbody>
         </table>
       </div>
@@ -1473,7 +1627,7 @@
     <div class="sec-tag grad-text">Our model</div>
     <h2 class="display">An Elo rating, built and tested here</h2>
     <p>A rating system written from scratch and fitted on this season&rsquo;s
-      results across 8 leagues &mdash; 3,556 matches,
+      results across 8 leagues &mdash; 3,692 matches,
       208 clubs. It uses nothing but who beat whom, by
       how much, and where. No bookmaker price enters it at any point.</p>
 
@@ -1540,11 +1694,11 @@
       <tr><td class="num fair">4</td><td class="pick">Rennes</td><td class="num odds">1585</td></tr>
       <tr><td class="num fair">5</td><td class="pick">Olympique Lyonnais</td><td class="num odds">1579</td></tr>
       <tr><td colspan="3" class="lg-head">G1</td></tr>
-      <tr><td class="num fair">1</td><td class="pick">Olympiakos Piraeus</td><td class="num odds">1763</td></tr>
-      <tr><td class="num fair">2</td><td class="pick">PAOK Saloniki</td><td class="num odds">1687</td></tr>
-      <tr><td class="num fair">3</td><td class="pick">Panathinaikos</td><td class="num odds">1592</td></tr>
-      <tr><td class="num fair">4</td><td class="pick">AEK Athen</td><td class="num odds">1586</td></tr>
-      <tr><td class="num fair">5</td><td class="pick">Levadiakos</td><td class="num odds">1579</td></tr>
+      <tr><td class="num fair">1</td><td class="pick">Olympiakos Piraeus</td><td class="num odds">1750</td></tr>
+      <tr><td class="num fair">2</td><td class="pick">PAOK Saloniki</td><td class="num odds">1706</td></tr>
+      <tr><td class="num fair">3</td><td class="pick">AEK Athen</td><td class="num odds">1654</td></tr>
+      <tr><td class="num fair">4</td><td class="pick">Aris Saloniki</td><td class="num odds">1620</td></tr>
+      <tr><td class="num fair">5</td><td class="pick">Panathinaikos</td><td class="num odds">1586</td></tr>
       <tr><td colspan="3" class="lg-head">Serie A</td></tr>
       <tr><td class="num fair">1</td><td class="pick">FC Internazionale Milano</td><td class="num odds">1763</td></tr>
       <tr><td class="num fair">2</td><td class="pick">Como</td><td class="num odds">1665</td></tr>
@@ -1564,11 +1718,11 @@
       <tr><td class="num fair">4</td><td class="pick">Sporting Clube de Braga</td><td class="num odds">1613</td></tr>
       <tr><td class="num fair">5</td><td class="pick">FC Famalic&#227;o</td><td class="num odds">1543</td></tr>
       <tr><td colspan="3" class="lg-head">SC0</td></tr>
-      <tr><td class="num fair">1</td><td class="pick">Celtic FC</td><td class="num odds">1737</td></tr>
-      <tr><td class="num fair">2</td><td class="pick">Heart of Midlothian</td><td class="num odds">1673</td></tr>
-      <tr><td class="num fair">3</td><td class="pick">Rangers FC</td><td class="num odds">1660</td></tr>
-      <tr><td class="num fair">4</td><td class="pick">Hibernian FC</td><td class="num odds">1614</td></tr>
-      <tr><td class="num fair">5</td><td class="pick">Falkirk FC</td><td class="num odds">1495</td></tr>
+      <tr><td class="num fair">1</td><td class="pick">Celtic FC</td><td class="num odds">1797</td></tr>
+      <tr><td class="num fair">2</td><td class="pick">Heart of Midlothian</td><td class="num odds">1682</td></tr>
+      <tr><td class="num fair">3</td><td class="pick">Rangers FC</td><td class="num odds">1625</td></tr>
+      <tr><td class="num fair">4</td><td class="pick">Hibernian FC</td><td class="num odds">1613</td></tr>
+      <tr><td class="num fair">5</td><td class="pick">Motherwell FC</td><td class="num odds">1521</td></tr>
       <tr><td colspan="3" class="lg-head">La Liga</td></tr>
       <tr><td class="num fair">1</td><td class="pick">Barcelona</td><td class="num odds">1754</td></tr>
       <tr><td class="num fair">2</td><td class="pick">Real Madrid C.F.</td><td class="num odds">1709</td></tr>
@@ -1576,11 +1730,11 @@
       <tr><td class="num fair">4</td><td class="pick">Villarreal</td><td class="num odds">1587</td></tr>
       <tr><td class="num fair">5</td><td class="pick">Real Betis</td><td class="num odds">1560</td></tr>
       <tr><td colspan="3" class="lg-head">T1</td></tr>
-      <tr><td class="num fair">1</td><td class="pick">Galatasaray</td><td class="num odds">1826</td></tr>
+      <tr><td class="num fair">1</td><td class="pick">Galatasaray</td><td class="num odds">1837</td></tr>
       <tr><td class="num fair">2</td><td class="pick">Fenerbah&#231;e</td><td class="num odds">1761</td></tr>
-      <tr><td class="num fair">3</td><td class="pick">Trabzonspor</td><td class="num odds">1618</td></tr>
-      <tr><td class="num fair">4</td><td class="pick">Samsunspor</td><td class="num odds">1588</td></tr>
-      <tr><td class="num fair">5</td><td class="pick">G&#246;ztepe</td><td class="num odds">1578</td></tr>
+      <tr><td class="num fair">3</td><td class="pick">Trabzonspor</td><td class="num odds">1612</td></tr>
+      <tr><td class="num fair">4</td><td class="pick">Samsunspor</td><td class="num odds">1592</td></tr>
+      <tr><td class="num fair">5</td><td class="pick">Be&#351;ikta&#351;</td><td class="num odds">1585</td></tr>
           </tbody>
         </table>
       </div>
@@ -1599,12 +1753,60 @@
           </tr></thead>
           <tbody>
       <tr>
+        <td class="fix"><span class="tm">FC Porto v Moreirense FC</span>
+          <span class="meta">Fri 04 Sep &#183; 22:15 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="pick">FC Porto<span class="mk">most likely &middot; 83%</span></td>
+        <td class="num"><span class="mdl">83% / 12% / 5%</span>
+          <span class="mev">our Elo &middot; rating gap +331</span></td>
+        <td class="num"><span class="mdl">83% / 12% / 4%</span><span class="mev">market &middot; 1% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Sporting Lisbon v Nacional</span>
+          <span class="meta">Sat 05 Sep &#183; 22:30 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="pick">Sporting Lisbon<span class="mk">most likely &middot; 83%</span></td>
+        <td class="num"><span class="mdl">83% / 12% / 5%</span>
+          <span class="mev">our Elo &middot; rating gap +328</span></td>
+        <td class="num"><span class="mdl">80% / 13% / 7%</span><span class="mev">market &middot; 3% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Manchester City v Coventry City</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Manchester City<span class="mk">most likely &middot; 78%</span></td>
+        <td class="num"><span class="mdl">78% / 15% / 7%</span>
+          <span class="mev">our Elo &middot; rating gap +268</span></td>
+        <td class="num"><span class="mdl">83% / 11% / 6%</span><span class="mev">market &middot; 5% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Arsenal v Chelsea</span>
+          <span class="meta">Sun 06 Sep &#183; 18:30 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Arsenal<span class="mk">most likely &middot; 73%</span></td>
+        <td class="num"><span class="mdl">73% / 17% / 10%</span>
+          <span class="mev">our Elo &middot; rating gap +213</span></td>
+        <td class="num"><span class="mdl">56% / 25% / 18%</span><span class="mev">market &middot; 16% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">VfB Stuttgart v 1. FC K&#246;ln</span>
+          <span class="meta">Fri 04 Sep &#183; 21:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">VfB Stuttgart<span class="mk">most likely &middot; 72%</span></td>
+        <td class="num"><span class="mdl">72% / 18% / 10%</span>
+          <span class="mev">our Elo &middot; rating gap +207</span></td>
+        <td class="num"><span class="mdl">63% / 19% / 18%</span><span class="mev">market &middot; 9% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Inter Milan v Napoli</span>
           <span class="meta">Sat 05 Sep &#183; 19:00 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="pick">Inter Milan<span class="mk">most likely &middot; 66%</span></td>
         <td class="num"><span class="mdl">66% / 20% / 14%</span>
           <span class="mev">our Elo &middot; rating gap +154</span></td>
         <td class="num"><span class="mdl">58% / 25% / 18%</span><span class="mev">market &middot; 8% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Bayer Leverkusen v Union Berlin</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Bayer Leverkusen<span class="mk">most likely &middot; 65%</span></td>
+        <td class="num"><span class="mdl">65% / 20% / 14%</span>
+          <span class="mev">our Elo &middot; rating gap +153</span></td>
+        <td class="num"><span class="mdl">67% / 18% / 15%</span><span class="mev">market &middot; 2% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Genoa v Como</span>
@@ -1615,20 +1817,36 @@
         <td class="num"><span class="mdl">17% / 30% / 53%</span><span class="mev">market &middot; 7% apart</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Nottingham Forest v Tottenham Hotspur</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Nottingham Forest<span class="mk">most likely &middot; 60%</span></td>
+        <td class="num"><span class="mdl">60% / 22% / 18%</span>
+          <span class="mev">our Elo &middot; rating gap +113</span></td>
+        <td class="num"><span class="mdl">39% / 27% / 33%</span><span class="mev">market &middot; 21% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Werder Bremen v RB Leipzig</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">RB Leipzig<span class="mk">most likely &middot; 58%</span></td>
+        <td class="num"><span class="mdl">16% / 26% / 58%</span>
+          <span class="mev">our Elo &middot; rating gap -225</span></td>
+        <td class="num"><span class="mdl">23% / 22% / 55%</span><span class="mev">market &middot; 8% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">West Ham United v Derby County</span>
           <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; Championship</span></td>
         <td class="pick">West Ham United<span class="mk">most likely &middot; 56%</span></td>
         <td class="num"><span class="mdl">56% / 24% / 20%</span>
           <span class="mev">our Elo &middot; rating gap +86</span></td>
-        <td class="num"><span class="mdl">74% / 18% / 9%</span><span class="mev">market &middot; 17% apart</span></td>
+        <td class="num"><span class="mdl">74% / 18% / 9%</span><span class="mev">market &middot; 18% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Millwall v Wrexham AFC</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Millwall<span class="mk">most likely &middot; 56%</span></td>
-        <td class="num"><span class="mdl">56% / 24% / 20%</span>
-          <span class="mev">our Elo &middot; rating gap +84</span></td>
-        <td class="num"><span class="mdl">42% / 28% / 31%</span><span class="mev">market &middot; 14% apart</span></td>
+        <td class="fix"><span class="tm">Santa Clara v Rio Ave FC</span>
+          <span class="meta">Sun 06 Sep &#183; 17:30 GMT+3 &#183; Primeira Liga - Portugal</span></td>
+        <td class="pick">Santa Clara<span class="mk">most likely &middot; 56%</span></td>
+        <td class="num"><span class="mdl">56% / 24% / 21%</span>
+          <span class="mev">our Elo &middot; rating gap +82</span></td>
+        <td class="num"><span class="mdl">53% / 27% / 19%</span><span class="mev">market &middot; 3% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">AS Roma v Atalanta BC</span>
@@ -1639,6 +1857,14 @@
         <td class="num"><span class="mdl">51% / 27% / 23%</span><span class="mev">market &middot; 4% apart</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Brentford v Sunderland</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Brentford<span class="mk">most likely &middot; 53%</span></td>
+        <td class="num"><span class="mdl">53% / 24% / 22%</span>
+          <span class="mev">our Elo &middot; rating gap +65</span></td>
+        <td class="num"><span class="mdl">60% / 24% / 17%</span><span class="mev">market &middot; 7% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Juventus v AC Milan</span>
           <span class="meta">Sun 06 Sep &#183; 21:45 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="pick">Juventus<span class="mk">most likely &middot; 51%</span></td>
@@ -1647,10 +1873,34 @@
         <td class="num"><span class="mdl">44% / 30% / 26%</span><span class="mev">market &middot; 8% apart</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Fulham v Crystal Palace</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Fulham<span class="mk">most likely &middot; 51%</span></td>
+        <td class="num"><span class="mdl">51% / 25% / 24%</span>
+          <span class="mev">our Elo &middot; rating gap +52</span></td>
+        <td class="num"><span class="mdl">42% / 27% / 31%</span><span class="mev">market &middot; 10% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Brighton and Hove Albion v Leeds United</span>
+          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Brighton and Hove Albi<span class="mk">most likely &middot; 50%</span></td>
+        <td class="num"><span class="mdl">50% / 25% / 25%</span>
+          <span class="mev">our Elo &middot; rating gap +42</span></td>
+        <td class="num"><span class="mdl">50% / 26% / 24%</span><span class="mev">market &middot; 1% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Everton v Manchester United</span>
+          <span class="meta">Sun 06 Sep &#183; 16:00 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Manchester United<span class="mk">most likely &middot; 49%</span></td>
+        <td class="num"><span class="mdl">23% / 28% / 49%</span>
+          <span class="mev">our Elo &middot; rating gap -149</span></td>
+        <td class="num"><span class="mdl">30% / 27% / 44%</span><span class="mev">market &middot; 6% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Swansea City v Wrexham AFC</span>
           <span class="meta">Sat 05 Sep &#183; 22:00 GMT+3 &#183; Championship</span></td>
         <td class="pick">Swansea City<span class="mk">most likely &middot; 49%</span></td>
-        <td class="num"><span class="mdl">49% / 26% / 25%</span>
+        <td class="num"><span class="mdl">49% / 26% / 26%</span>
           <span class="mev">our Elo &middot; rating gap +35</span></td>
         <td class="num"><span class="mdl">37% / 28% / 35%</span><span class="mev">market &middot; 12% apart</span></td>
       </tr>
@@ -1671,26 +1921,26 @@
         <td class="num"><span class="mdl">47% / 28% / 25%</span><span class="mev">market &middot; 2% apart</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">TSG Hoffenheim v Borussia Dortmund</span>
+          <span class="meta">Sat 05 Sep &#183; 16:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Borussia Dortmund<span class="mk">most likely &middot; 47%</span></td>
+        <td class="num"><span class="mdl">25% / 28% / 47%</span>
+          <span class="mev">our Elo &middot; rating gap -135</span></td>
+        <td class="num"><span class="mdl">32% / 25% / 43%</span><span class="mev">market &middot; 7% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Fiorentina v Torino</span>
           <span class="meta">Sat 05 Sep &#183; 16:00 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="pick">Fiorentina<span class="mk">most likely &middot; 47%</span></td>
         <td class="num"><span class="mdl">47% / 26% / 27%</span>
           <span class="mev">our Elo &middot; rating gap +25</span></td>
-        <td class="num"><span class="mdl">51% / 30% / 19%</span><span class="mev">market &middot; 7% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">West Bromwich Albion v Charlton Athletic</span>
-          <span class="meta">Wed 02 Sep &#183; 21:45 GMT+3 &#183; Championship</span></td>
-        <td class="pick">West Bromwich Albion<span class="mk">most likely &middot; 46%</span></td>
-        <td class="num"><span class="mdl">46% / 26% / 28%</span>
-          <span class="mev">our Elo &middot; rating gap +13</span></td>
-        <td class="num"><span class="mdl">54% / 25% / 21%</span><span class="mev">market &middot; 9% apart</span></td>
+        <td class="num"><span class="mdl">51% / 30% / 19%</span><span class="mev">market &middot; 8% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Bologna v Sassuolo</span>
           <span class="meta">Sun 06 Sep &#183; 19:00 GMT+3 &#183; Serie A - Italy</span></td>
         <td class="pick">Bologna<span class="mk">most likely &middot; 45%</span></td>
-        <td class="num"><span class="mdl">45% / 27% / 29%</span>
+        <td class="num"><span class="mdl">45% / 26% / 29%</span>
           <span class="mev">our Elo &middot; rating gap +7</span></td>
         <td class="num"><span class="mdl">49% / 27% / 24%</span><span class="mev">market &middot; 5% apart</span></td>
       </tr>
@@ -1703,20 +1953,20 @@
         <td class="num"><span class="mdl">27% / 27% / 46%</span><span class="mev">market &middot; 1% apart</span></td>
       </tr>
       <tr>
-        <td class="fix"><span class="tm">Burnley v Middlesbrough</span>
-          <span class="meta">Wed 02 Sep &#183; 22:00 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Middlesbrough<span class="mk">most likely &middot; 44%</span></td>
-        <td class="num"><span class="mdl">28% / 28% / 44%</span>
-          <span class="mev">our Elo &middot; rating gap -108</span></td>
-        <td class="num"><span class="mdl">34% / 26% / 40%</span><span class="mev">market &middot; 5% apart</span></td>
-      </tr>
-      <tr>
         <td class="fix"><span class="tm">Ipswich Town v Liverpool</span>
           <span class="meta">Fri 04 Sep &#183; 22:00 GMT+3 &#183; EPL</span></td>
         <td class="pick">Liverpool<span class="mk">most likely &middot; 43%</span></td>
         <td class="num"><span class="mdl">29% / 28% / 43%</span>
           <span class="mev">our Elo &middot; rating gap -104</span></td>
-        <td class="num"><span class="mdl">20% / 20% / 60%</span><span class="mev">market &middot; 17% apart</span></td>
+        <td class="num"><span class="mdl">18% / 20% / 63%</span><span class="mev">market &middot; 20% apart</span></td>
+      </tr>
+      <tr>
+        <td class="fix"><span class="tm">Eintracht Frankfurt v Augsburg</span>
+          <span class="meta">Sun 06 Sep &#183; 18:30 GMT+3 &#183; Bundesliga - Germany</span></td>
+        <td class="pick">Eintracht Frankfurt<span class="mk">most likely &middot; 42%</span></td>
+        <td class="num"><span class="mdl">42% / 27% / 31%</span>
+          <span class="mev">our Elo &middot; rating gap -9</span></td>
+        <td class="num"><span class="mdl">51% / 23% / 26%</span><span class="mev">market &middot; 9% apart</span></td>
       </tr>
       <tr>
         <td class="fix"><span class="tm">Stoke City v Charlton Athletic</span>
@@ -1727,28 +1977,20 @@
         <td class="num"><span class="mdl">44% / 29% / 27%</span><span class="mev">market &middot; 14% apart</span></td>
       </tr>
       <tr>
+        <td class="fix"><span class="tm">Hull City v Aston Villa</span>
+          <span class="meta">Sat 05 Sep &#183; 19:30 GMT+3 &#183; EPL</span></td>
+        <td class="pick">Aston Villa<span class="mk">most likely &middot; 40%</span></td>
+        <td class="num"><span class="mdl">32% / 28% / 40%</span>
+          <span class="mev">our Elo &middot; rating gap -77</span></td>
+        <td class="num"><span class="mdl">23% / 26% / 52%</span><span class="mev">market &middot; 12% apart</span></td>
+      </tr>
+      <tr>
         <td class="fix"><span class="tm">Birmingham City v Wolverhampton Wanderers</span>
           <span class="meta">Sun 06 Sep &#183; 14:00 GMT+3 &#183; Championship</span></td>
         <td class="pick">Birmingham City<span class="mk">most likely &middot; 38%</span></td>
-        <td class="num"><span class="mdl">38% / 28% / 35%</span>
+        <td class="num"><span class="mdl">38% / 27% / 35%</span>
           <span class="mev">our Elo &middot; rating gap -39</span></td>
         <td class="num"><span class="mdl">33% / 29% / 39%</span><span class="mev">market &middot; 5% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Sheffield United v Norwich City</span>
-          <span class="meta">Sat 05 Sep &#183; 17:00 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Sheffield United<span class="mk">most likely &middot; 38%</span></td>
-        <td class="num"><span class="mdl">38% / 28% / 35%</span>
-          <span class="mev">our Elo &middot; rating gap -40</span></td>
-        <td class="num"><span class="mdl">40% / 28% / 32%</span><span class="mev">market &middot; 2% apart</span></td>
-      </tr>
-      <tr>
-        <td class="fix"><span class="tm">Preston North End v Blackburn Rovers</span>
-          <span class="meta">Sat 05 Sep &#183; 14:30 GMT+3 &#183; Championship</span></td>
-        <td class="pick">Preston North End<span class="mk">most likely &middot; 37%</span></td>
-        <td class="num"><span class="mdl">37% / 28% / 36%</span>
-          <span class="mev">our Elo &middot; rating gap -46</span></td>
-        <td class="num"><span class="mdl">36% / 28% / 35%</span><span class="mev">market &middot; 1% apart</span></td>
       </tr>
           </tbody>
         </table>
